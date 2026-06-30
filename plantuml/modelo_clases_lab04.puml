@@ -1,0 +1,233 @@
+@startuml modelo_clases_lab04
+title Modelo de clases - Laboratorio 04: Ensemble Models
+
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam linetype ortho
+skinparam monochrome false
+skinparam backgroundColor #FFFFFF
+skinparam class {
+  BackgroundColor #F8FBFF
+  BorderColor #2F5597
+  ArrowColor #2F5597
+}
+skinparam package {
+  BackgroundColor #FFFFFF
+  BorderColor #A6A6A6
+}
+
+legend right
+  |= Estereotipo |= Significado |
+  | <<module>> | Archivo Python modelado como componente funcional |
+  | <<dataclass>> | Clase de datos propia |
+  | <<estimator>> | Estimador compatible con scikit-learn |
+  | <<configuration>> | Archivo YAML que controla el experimento |
+  | <<external>> | Clase externa de librerías |
+endlegend
+
+package "Aplicación" {
+  class Main <<module>> {
+    +parse_args(): ArgumentParser
+    +main(): void
+    -_selected_experiments(requested_experiments, configured_experiments): list[dict]
+    -_selected_models(requested_models, model_registry, search_models): list[str]
+    -_search_config_for_model(model_key, search_type, experiment_run, hyperparameter_config, validation_config): dict
+    -_random_state(random_state_config, key): int
+  }
+}
+
+package "config" {
+  class PathsYaml <<configuration>> {
+    +dataset.path: str
+    +outputs: dict[str, str]
+    +experiment.targets: list[str]
+    +experiment.experiments: list[dict]
+    +experiment.validation: dict
+    +experiment.random_state: dict
+    +hyperparameter_search.default: dict
+    +hyperparameter_search.grid.models: dict
+    +hyperparameter_search.random.models: dict
+  }
+}
+
+package "src.data_loader" {
+  class DataLoader <<module>> {
+    +FEATURE_COLS: list[str]
+    +TARGETS: list[str]
+    +load_sav_dataset(dataset_path): DataFrame
+    -_validate_columns(df): void
+    +prepare_xy(df, target_name): tuple[DataFrame, Series]
+  }
+}
+
+package "src.settings" {
+  class Settings <<module>> {
+    +PROJECT_ROOT: Path
+    +DEFAULT_CONFIG_PATH: Path
+    -_resolve_path(value): Path
+    +load_config(config_path): dict
+    +ensure_output_dirs(config): void
+  }
+}
+
+package "src.models" {
+  class ModelSpec <<dataclass>> {
+    +key: str
+    +display_name: str
+    +implemented: bool
+    +pipeline: Pipeline | None
+    +student_note: str
+  }
+
+  class RobustStackingClassifier <<estimator>> {
+    +random_state: int
+    +cv: int
+    +final_C: float
+    +tree_max_depth: int | None
+    +n_neighbors: int
+    +logistic_C: float
+    +classes_: ndarray
+    +n_features_in_: int
+    +feature_names_in_: ndarray
+    +final_estimator_: LogisticRegression
+    +estimators_: list[tuple[str, estimator]]
+    +fit(X, y): RobustStackingClassifier
+    +predict(X): ndarray
+    +predict_proba(X): ndarray
+    -_build_base_estimators(): list[tuple[str, BaseEstimator]]
+    -_out_of_fold_meta_features(X, y_array, base_estimators, min_count): ndarray
+    -_in_sample_meta_features(X, y_array, base_estimators): ndarray
+    -_meta_features_from_fitted(X): ndarray
+    -_meta_features(X, estimators): ndarray
+    -_aligned_predict_proba(estimator, X): ndarray
+  }
+
+  class ModelFactory <<module>> {
+    -_safe_take(X, indices): Any
+    +build_model_registry(random_state): dict[str, ModelSpec]
+  }
+}
+
+package "src.evaluation" {
+  class Evaluation <<module>> {
+    +class_distribution(y): dict[int, int]
+    +compute_outer_folds(y, max_outer_folds): tuple[int, int]
+    +unimplemented_result(target_name, model_spec, distribution, n_min, k_outer, experiment_name): dict
+    +run_nested_cv(X, y, target_name, model_spec, validation_config, search_config, random_state_config, experiment_name): dict
+    +assign_icn(results): void
+    -_search_space_from_config(model_key, search_type, search_config): dict
+    -_materialize_distributions(distributions_config): dict
+    -_materialize_distribution(param_name, distribution_config): Any
+    -_build_search_cv(estimator, search_type, search_params, n_iter, scoring, cv, n_jobs, random_state): GridSearchCV | RandomizedSearchCV
+    -_build_scorer(scoring_name): scorer
+    -_random_state(random_state_config, key): int
+    -_build_inner_cv(y_train, requested_inner, random_state, target_name): StratifiedKFold | KFold
+    -_compute_fold_metrics(y_true, y_pred): dict[str, float]
+    -_format_params(params): str
+    -_best_params_mode(counter): str
+  }
+}
+
+package "src.reports" {
+  class Reports <<module>> {
+    +SUMMARY_COLUMNS: list[str]
+    +PLAIN_TABLE_WIDTHS: list[int]
+    +write_summary_csv(results_by_target, output_path): void
+    +write_json_results(results_by_target, output_path): void
+    +write_auxiliary_tables(results_by_target, output_dirs): void
+    +write_warnings(results_by_target, output_path): void
+    +write_latex_tables(results_by_target, output_path): void
+    +write_pdf_tables(results_by_target, output_path): void
+    -_write_confusion_matrix(target, item, output_dir): void
+    -_write_class_report(target, item, output_dir): void
+    -_latex_row(item): str
+    -_plain_table_block(target, results): list[str]
+    -_plain_row(values, header): str
+    -_write_simple_pdf(pages, output_path): void
+    -_pdf_content_stream(lines): bytes
+    -_pdf_escape(text): str
+    -_format_distribution(distribution): str
+    -_format_mean_std(mean, std): str
+    -_format_float(value): str
+    -_csv_value(value): Any
+    +latex_escape(value): str
+  }
+}
+
+package "scikit-learn / librerías externas" {
+  abstract class BaseEstimator <<external>>
+  interface ClassifierMixin <<external>>
+  class Pipeline <<external>>
+  class BaggingClassifier <<external>>
+  class AdaBoostClassifier <<external>>
+  class GradientBoostingClassifier <<external>>
+  class DecisionTreeClassifier <<external>>
+  class LogisticRegression <<external>>
+  class KNeighborsClassifier <<external>>
+  class StandardScaler <<external>>
+  class GridSearchCV <<external>>
+  class RandomizedSearchCV <<external>>
+  class scipy.stats <<external>>
+  class StratifiedKFold <<external>>
+  class KFold <<external>>
+  class DataFrame <<external>>
+  class Series <<external>>
+}
+
+Main ..> Settings : carga configuración
+Main ..> PathsYaml : lee experimento\ny búsquedas
+Main ..> DataLoader : carga dataset\ny prepara X/y
+Main ..> ModelFactory : construye registry
+Main ..> Evaluation : evalúa modelos
+Main ..> Reports : escribe salidas
+
+ModelFactory ..> ModelSpec : crea especificaciones
+ModelFactory ..> RobustStackingClassifier : registra Stacking
+ModelFactory ..> BaggingClassifier : configura Bagging
+ModelFactory ..> AdaBoostClassifier : configura AdaBoost
+ModelFactory ..> GradientBoostingClassifier : configura Gradient Boosting
+ModelFactory ..> DecisionTreeClassifier : usa árboles base
+ModelFactory ..> Pipeline : arma pipelines
+
+ModelSpec o-- Pipeline : pipeline
+RobustStackingClassifier --|> BaseEstimator
+RobustStackingClassifier ..|> ClassifierMixin
+RobustStackingClassifier ..> DecisionTreeClassifier : base tree
+RobustStackingClassifier ..> KNeighborsClassifier : base knn
+RobustStackingClassifier ..> LogisticRegression : base y meta-modelo
+RobustStackingClassifier ..> StandardScaler : escalamiento
+RobustStackingClassifier ..> Pipeline : pipelines base
+RobustStackingClassifier ..> StratifiedKFold : meta-features out-of-fold
+
+Evaluation ..> ModelSpec : recibe modelo
+Evaluation ..> PathsYaml : usa validation_config,\nsearch_config y random_state
+Evaluation ..> GridSearchCV : búsqueda interna
+Evaluation ..> RandomizedSearchCV : búsqueda interna aleatoria
+Evaluation ..> scipy.stats : randint, uniform,\nloguniform
+Evaluation ..> StratifiedKFold : folds externos/internos
+Evaluation ..> KFold : fallback con clases pequeñas
+Evaluation ..> Reports : produce datos consumidos por reportes
+
+DataLoader ..> DataFrame : retorna dataset
+DataLoader ..> Series : retorna objetivo
+
+Reports ..> DataFrame : consume resultados agregados
+Reports ..> "CSV/JSON/LaTeX/PDF" : genera artefactos
+
+note bottom of Evaluation
+  Evaluación anidada:
+  1. Ciclo externo: estima generalización.
+  2. Ciclo interno: GridSearchCV o RandomizedSearchCV selecciona hiperparámetros.
+  3. RandomizedSearchCV recibe distribuciones materializadas desde YAML.
+  4. Métrica principal: f1_macro.
+  5. El ICN compara cada corrida experimento-modelo.
+end note
+
+note bottom of RobustStackingClassifier
+  Stacking robusto:
+  usa predicciones out-of-fold cuando el soporte por clase lo permite.
+  Si una clase queda con soporte menor a 2, usa meta-features in-sample.
+end note
+
+@enduml

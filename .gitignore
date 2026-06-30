@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Generated outputs
+outputs/*
+!outputs/.gitkeep
+
+# Hidden teaching/planning artifacts
+PLAN.md
+presentation/
+
+# LaTeX build artifacts
+presentation/*.aux
+presentation/*.log
+presentation/*.nav
+presentation/*.out
+presentation/*.snm
+presentation/*.toc
+presentation/*.vrb

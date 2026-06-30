@@ -1,0 +1,154 @@
+dataset:
+  # Ruta relativa al repositorio. Cambiar este valor si el archivo .sav se
+  # ubica en otra carpeta o con otro nombre.
+  path: "datasets/15 atributos R0-R5.sav"
+
+outputs:
+  root: "outputs"
+  tables: "outputs/tables"
+  confusion_matrices: "outputs/confusion_matrices"
+  per_class: "outputs/per_class"
+
+experiment:
+  targets:
+    - "GDS"
+    - "GDS_R1"
+    - "GDS_R2"
+    - "GDS_R3"
+    - "GDS_R4"
+    - "GDS_R5"
+
+  # Orden didáctico de ejecución:
+  # 1) se ejecutan todos los modelos con GridSearchCV;
+  # 2) luego se ejecutan todos los modelos con RandomizedSearchCV.
+  experiments:
+    - name: "grid_all"
+      search_type: "grid"
+      models:
+        - "bagging"
+        - "adaboost"
+        - "stacking"
+        - "gradient_boosting"
+
+    - name: "random_all"
+      search_type: "random"
+      models:
+        - "bagging"
+        - "adaboost"
+        - "stacking"
+        - "gradient_boosting"
+
+  validation:
+    max_outer_folds: 5
+    max_inner_folds: 3
+    scoring: "f1_macro"
+    n_jobs: -1
+
+  # Semillas centralizadas para que todos los experimentos sean comparables.
+  # Si se cambia una semilla, el cambio afecta de forma controlada al flujo indicado.
+  random_state:
+    global: 42
+    outer_cv: 42
+    inner_cv: 123
+    model: 42
+    search: 42
+
+hyperparameter_search:
+  default:
+    scoring: "f1_macro"
+    random_n_iter: 12
+
+  grid:
+    models:
+      bagging:
+        enabled: true
+        params:
+          clf__n_estimators: [25, 50]
+          clf__max_samples: [0.7, 1.0]
+          clf__estimator__max_depth: [2, null]
+
+      adaboost:
+        enabled: true
+        params:
+          clf__n_estimators: [25, 50, 100]
+          clf__learning_rate: [0.5, 1.0]
+          clf__estimator__max_depth: [2, 3]
+
+      stacking:
+        enabled: true
+        params:
+          clf__final_C: [0.1, 1.0]
+          clf__tree_max_depth: [2, null]
+          clf__n_neighbors: [3, 7]
+
+      gradient_boosting:
+        enabled: true
+        params:
+          clf__n_estimators: [50, 100]
+          clf__learning_rate: [0.05, 0.1]
+          clf__max_depth: [2, 3]
+          clf__subsample: [0.8, 1.0]
+
+  random:
+    models:
+      bagging:
+        enabled: true
+        distributions:
+          clf__n_estimators:
+            dist: "randint"
+            low: 25
+            high: 151
+          clf__max_samples:
+            dist: "uniform"
+            low: 0.6
+            high: 1.0
+          clf__estimator__max_depth:
+            values: [2, 3, 4, null]
+
+      adaboost:
+        enabled: true
+        distributions:
+          clf__n_estimators:
+            dist: "randint"
+            low: 25
+            high: 151
+          clf__learning_rate:
+            dist: "uniform"
+            low: 0.5
+            high: 1.0
+          clf__estimator__max_depth:
+            values: [2, 3]
+
+      stacking:
+        enabled: true
+        distributions:
+          clf__final_C:
+            dist: "loguniform"
+            low: 0.01
+            high: 10.0
+          clf__tree_max_depth:
+            values: [2, 3, 4, null]
+          clf__n_neighbors:
+            dist: "randint"
+            low: 3
+            high: 12
+
+      gradient_boosting:
+        enabled: true
+        distributions:
+          clf__n_estimators:
+            dist: "randint"
+            low: 50
+            high: 151
+          clf__learning_rate:
+            dist: "loguniform"
+            low: 0.01
+            high: 0.5
+          clf__max_depth:
+            dist: "randint"
+            low: 2
+            high: 5
+          clf__subsample:
+            dist: "uniform"
+            low: 0.7
+            high: 1.0
