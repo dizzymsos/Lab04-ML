@@ -1,0 +1,5967 @@
+{
+  "GDS": [
+    {
+      "target": "GDS",
+      "experiment_name": "grid_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 500,
+        "3": 298,
+        "4": 108,
+        "5": 42,
+        "6": 20,
+        "7": 2
+      },
+      "n_min": 2,
+      "k_outer": 2,
+      "k_inner_requested": 2,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50
+        ],
+        "clf__max_samples": [
+          0.7,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          null
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50 (2/2)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50": 2
+      },
+      "warnings": [
+        "GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo."
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "confusion_matrix": [
+        [
+          72,
+          66,
+          10,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          170,
+          217,
+          90,
+          18,
+          5,
+          0,
+          0
+        ],
+        [
+          27,
+          88,
+          108,
+          62,
+          9,
+          3,
+          1
+        ],
+        [
+          3,
+          12,
+          42,
+          36,
+          11,
+          4,
+          0
+        ],
+        [
+          0,
+          3,
+          3,
+          14,
+          14,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          3,
+          14,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.2647058823529412,
+          "recall": 0.48322147651006714,
+          "f1-score": 0.342042755344418,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.5621761658031088,
+          "recall": 0.434,
+          "f1-score": 0.4898419864559819,
+          "support": 500.0
+        },
+        "3": {
+          "precision": 0.4268774703557312,
+          "recall": 0.3624161073825503,
+          "f1-score": 0.39201451905626133,
+          "support": 298.0
+        },
+        "4": {
+          "precision": 0.26865671641791045,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.2975206611570248,
+          "support": 108.0
+        },
+        "5": {
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.3333333333333333,
+          "support": 42.0
+        },
+        "6": {
+          "precision": 0.45161290322580644,
+          "recall": 0.7,
+          "f1-score": 0.5490196078431373,
+          "support": 20.0
+        },
+        "7": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "accuracy": 0.4119749776586238,
+        "macro avg": {
+          "precision": 0.32962321021269014,
+          "recall": 0.37804346436561204,
+          "f1-score": 0.34339612331287955,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.44663621892386146,
+          "recall": 0.4119749776586238,
+          "f1-score": 0.4198555085030354,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.4119888832098134,
+      "accuracy_std": 0.02200560395578634,
+      "balanced_accuracy_mean": 0.37803370388605284,
+      "balanced_accuracy_std": 0.028314933066094543,
+      "precision_macro_mean": 0.34147101990200157,
+      "precision_macro_std": 0.009861113137733865,
+      "recall_macro_mean": 0.37803370388605284,
+      "recall_macro_std": 0.028314933066094543,
+      "f1_macro_mean": 0.34591365081033176,
+      "f1_macro_std": 0.0020472279546101435,
+      "stability": 1.0,
+      "icn": 0.5439645696529519,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS",
+      "experiment_name": "grid_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 500,
+        "3": 298,
+        "4": 108,
+        "5": 42,
+        "6": 20,
+        "7": 2
+      },
+      "n_min": 2,
+      "k_outer": 2,
+      "k_inner_requested": 2,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.5,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          3
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=50 (1/2)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=50": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=100": 1
+      },
+      "warnings": [
+        "GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo."
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "confusion_matrix": [
+        [
+          74,
+          55,
+          14,
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          182,
+          194,
+          97,
+          26,
+          1,
+          0,
+          0
+        ],
+        [
+          28,
+          82,
+          98,
+          79,
+          8,
+          1,
+          2
+        ],
+        [
+          7,
+          8,
+          31,
+          38,
+          17,
+          6,
+          1
+        ],
+        [
+          0,
+          1,
+          3,
+          18,
+          13,
+          5,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          6,
+          3,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.2542955326460481,
+          "recall": 0.4966442953020134,
+          "f1-score": 0.33636363636363636,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.5705882352941176,
+          "recall": 0.388,
+          "f1-score": 0.46190476190476193,
+          "support": 500.0
+        },
+        "3": {
+          "precision": 0.40329218106995884,
+          "recall": 0.3288590604026846,
+          "f1-score": 0.36229205175600737,
+          "support": 298.0
+        },
+        "4": {
+          "precision": 0.22485207100591717,
+          "recall": 0.35185185185185186,
+          "f1-score": 0.2743682310469314,
+          "support": 108.0
+        },
+        "5": {
+          "precision": 0.28888888888888886,
+          "recall": 0.30952380952380953,
+          "f1-score": 0.2988505747126437,
+          "support": 42.0
+        },
+        "6": {
+          "precision": 0.2,
+          "recall": 0.15,
+          "f1-score": 0.17142857142857143,
+          "support": 20.0
+        },
+        "7": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1-score": 0.2222222222222222,
+          "support": 2.0
+        },
+        "accuracy": 0.3771224307417337,
+        "macro avg": {
+          "precision": 0.2952738441292758,
+          "recall": 0.4321255738686228,
+          "f1-score": 0.30391857849068205,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.4325581581520465,
+          "recall": 0.3771224307417337,
+          "f1-score": 0.38882046752267074,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.3771211346792742,
+      "accuracy_std": 0.002051025291711533,
+      "balanced_accuracy_mean": 0.432180249829339,
+      "balanced_accuracy_std": 0.019346689269341907,
+      "precision_macro_mean": 0.2999754206368458,
+      "precision_macro_std": 0.027343754829695924,
+      "recall_macro_mean": 0.432180249829339,
+      "recall_macro_std": 0.019346689269341907,
+      "f1_macro_mean": 0.3014262283779272,
+      "f1_macro_std": 0.02283627011509533,
+      "stability": 0.6344012250163489,
+      "icn": 0.4016606786339975,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS",
+      "experiment_name": "grid_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 500,
+        "3": 298,
+        "4": 108,
+        "5": 42,
+        "6": 20,
+        "7": 2
+      },
+      "n_min": 2,
+      "k_outer": 2,
+      "k_inner_requested": 2,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__final_C": [
+          0.1,
+          1.0
+        ],
+        "clf__tree_max_depth": [
+          2,
+          null
+        ],
+        "clf__n_neighbors": [
+          3,
+          7
+        ]
+      },
+      "best_params_mode": "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=2 (2/2)",
+      "best_params_counts": {
+        "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=2": 2
+      },
+      "warnings": [
+        "GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo."
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "confusion_matrix": [
+        [
+          73,
+          63,
+          11,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          180,
+          221,
+          77,
+          17,
+          5,
+          0,
+          0
+        ],
+        [
+          29,
+          74,
+          111,
+          72,
+          9,
+          1,
+          2
+        ],
+        [
+          4,
+          9,
+          42,
+          35,
+          13,
+          5,
+          0
+        ],
+        [
+          0,
+          2,
+          3,
+          15,
+          14,
+          6,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          2,
+          7,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.25524475524475526,
+          "recall": 0.4899328859060403,
+          "f1-score": 0.335632183908046,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.5989159891598916,
+          "recall": 0.442,
+          "f1-score": 0.5086306098964327,
+          "support": 500.0
+        },
+        "3": {
+          "precision": 0.45491803278688525,
+          "recall": 0.3724832214765101,
+          "f1-score": 0.4095940959409594,
+          "support": 298.0
+        },
+        "4": {
+          "precision": 0.24305555555555555,
+          "recall": 0.32407407407407407,
+          "f1-score": 0.2777777777777778,
+          "support": 108.0
+        },
+        "5": {
+          "precision": 0.32558139534883723,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.32941176470588235,
+          "support": 42.0
+        },
+        "6": {
+          "precision": 0.3684210526315789,
+          "recall": 0.35,
+          "f1-score": 0.358974358974359,
+          "support": 20.0
+        },
+        "7": {
+          "precision": 0.14285714285714285,
+          "recall": 1.0,
+          "f1-score": 0.25,
+          "support": 2.0
+        },
+        "accuracy": 0.4137622877569258,
+        "macro avg": {
+          "precision": 0.34128484622637806,
+          "recall": 0.473117644969994,
+          "f1-score": 0.3528601130290653,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.4652668371983049,
+          "recall": 0.4137622877569258,
+          "f1-score": 0.427076248648843,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.41376501405571176,
+      "accuracy_std": 0.004314381395560668,
+      "balanced_accuracy_mean": 0.4731014926719625,
+      "balanced_accuracy_std": 0.029060325336146508,
+      "precision_macro_mean": 0.36504479360301,
+      "precision_macro_std": 0.07327823806165198,
+      "recall_macro_mean": 0.4731014926719625,
+      "recall_macro_std": 0.029060325336146508,
+      "f1_macro_mean": 0.36415700337371737,
+      "f1_macro_std": 0.05891022526921887,
+      "stability": 1.7586154754667405e-11,
+      "icn": 0.9360915915571133,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS",
+      "experiment_name": "grid_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 500,
+        "3": 298,
+        "4": 108,
+        "5": 42,
+        "6": 20,
+        "7": 2
+      },
+      "n_min": 2,
+      "k_outer": 2,
+      "k_inner_requested": 2,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.05,
+          0.1
+        ],
+        "clf__max_depth": [
+          2,
+          3
+        ],
+        "clf__subsample": [
+          0.8,
+          1.0
+        ]
+      },
+      "best_params_mode": "clf__learning_rate=0.1, clf__max_depth=2, clf__n_estimators=50, clf__subsample=1.0 (1/2)",
+      "best_params_counts": {
+        "clf__learning_rate=0.1, clf__max_depth=2, clf__n_estimators=50, clf__subsample=1.0": 1,
+        "clf__learning_rate=0.05, clf__max_depth=2, clf__n_estimators=50, clf__subsample=0.8": 1
+      },
+      "warnings": [
+        "GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo."
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          140,
+          9,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          435,
+          61,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          129,
+          150,
+          16,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          13,
+          54,
+          33,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          9,
+          16,
+          9,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          3,
+          5,
+          11,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.6058495821727019,
+          "recall": 0.87,
+          "f1-score": 0.7142857142857143,
+          "support": 500.0
+        },
+        "3": {
+          "precision": 0.528169014084507,
+          "recall": 0.5033557046979866,
+          "f1-score": 0.5154639175257731,
+          "support": 298.0
+        },
+        "4": {
+          "precision": 0.4714285714285714,
+          "recall": 0.3055555555555556,
+          "f1-score": 0.3707865168539326,
+          "support": 108.0
+        },
+        "5": {
+          "precision": 0.375,
+          "recall": 0.21428571428571427,
+          "f1-score": 0.2727272727272727,
+          "support": 42.0
+        },
+        "6": {
+          "precision": 0.5,
+          "recall": 0.55,
+          "f1-score": 0.5238095238095238,
+          "support": 20.0
+        },
+        "7": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "accuracy": 0.5701519213583557,
+        "macro avg": {
+          "precision": 0.3543495953836829,
+          "recall": 0.34902813921989384,
+          "f1-score": 0.3424389921717452,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.47987796514550474,
+          "recall": 0.5701519213583557,
+          "f1-score": 0.5118201825884703,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5701284180935344,
+      "accuracy_std": 0.037194033538901376,
+      "balanced_accuracy_mean": 0.3490281392198938,
+      "balanced_accuracy_std": 0.01224113621848646,
+      "precision_macro_mean": 0.3629182942890483,
+      "precision_macro_std": 0.030378902587593792,
+      "recall_macro_mean": 0.3490281392198938,
+      "recall_macro_std": 0.01224113621848646,
+      "f1_macro_mean": 0.34127922388179177,
+      "f1_macro_std": 0.009873568449023293,
+      "stability": 0.8623649673095083,
+      "icn": 0.4452277130424931,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS",
+      "experiment_name": "random_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 500,
+        "3": 298,
+        "4": 108,
+        "5": 42,
+        "6": 20,
+        "7": 2
+      },
+      "n_min": 2,
+      "k_outer": 2,
+      "k_inner_requested": 2,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__max_samples": {
+          "dist": "uniform",
+          "low": 0.6,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663, clf__n_estimators=115 (1/2)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663, clf__n_estimators=115": 1,
+        "clf__estimator__max_depth=4, clf__max_samples=0.7599443886861021, clf__n_estimators=116": 1
+      },
+      "warnings": [
+        "GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo."
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "confusion_matrix": [
+        [
+          91,
+          47,
+          10,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          205,
+          182,
+          99,
+          11,
+          3,
+          0,
+          0
+        ],
+        [
+          39,
+          72,
+          106,
+          70,
+          8,
+          2,
+          1
+        ],
+        [
+          2,
+          10,
+          42,
+          32,
+          20,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          14,
+          14,
+          6,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          5,
+          6,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.27002967359050445,
+          "recall": 0.610738255033557,
+          "f1-score": 0.37448559670781895,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.5814696485623003,
+          "recall": 0.364,
+          "f1-score": 0.44772447724477243,
+          "support": 500.0
+        },
+        "3": {
+          "precision": 0.4061302681992337,
+          "recall": 0.35570469798657717,
+          "f1-score": 0.37924865831842575,
+          "support": 298.0
+        },
+        "4": {
+          "precision": 0.24427480916030533,
+          "recall": 0.2962962962962963,
+          "f1-score": 0.26778242677824265,
+          "support": 108.0
+        },
+        "5": {
+          "precision": 0.28,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.30434782608695654,
+          "support": 42.0
+        },
+        "6": {
+          "precision": 0.35294117647058826,
+          "recall": 0.3,
+          "f1-score": 0.32432432432432434,
+          "support": 20.0
+        },
+        "7": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f1-score": 0.16666666666666666,
+          "support": 2.0
+        },
+        "accuracy": 0.38605898123324395,
+        "macro avg": {
+          "precision": 0.31926365371184745,
+          "recall": 0.3942960832356805,
+          "f1-score": 0.32351142516102965,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.4445009548599032,
+          "recall": 0.38605898123324395,
+          "f1-score": 0.39428027106189845,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.38604491438793764,
+      "accuracy_std": 0.02226085269803678,
+      "balanced_accuracy_mean": 0.3943965384368069,
+      "balanced_accuracy_std": 0.08409774028269754,
+      "precision_macro_mean": 0.3181747511067659,
+      "precision_macro_std": 0.026020942125662645,
+      "recall_macro_mean": 0.3943965384368069,
+      "recall_macro_std": 0.08409774028269754,
+      "f1_macro_mean": 0.3119747691100039,
+      "f1_macro_std": 0.01777644619978063,
+      "stability": 0.7233839405638777,
+      "icn": 0.3651978686481727,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS",
+      "experiment_name": "random_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 500,
+        "3": 298,
+        "4": 108,
+        "5": 42,
+        "6": 20,
+        "7": 2
+      },
+      "n_min": 2,
+      "k_outer": 2,
+      "k_inner_requested": 2,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "uniform",
+          "low": 0.5,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=3, clf__learning_rate=0.5714334089609704, clf__n_estimators=27 (1/2)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5714334089609704, clf__n_estimators=27": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.6831809216468459, clf__n_estimators=86": 1
+      },
+      "warnings": [
+        "GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo."
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "confusion_matrix": [
+        [
+          10,
+          119,
+          15,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          31,
+          337,
+          113,
+          18,
+          1,
+          0,
+          0
+        ],
+        [
+          8,
+          92,
+          126,
+          58,
+          12,
+          1,
+          1
+        ],
+        [
+          3,
+          9,
+          46,
+          24,
+          21,
+          5,
+          0
+        ],
+        [
+          0,
+          1,
+          6,
+          10,
+          20,
+          3,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          7,
+          4,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.19230769230769232,
+          "recall": 0.06711409395973154,
+          "f1-score": 0.09950248756218906,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.6039426523297491,
+          "recall": 0.674,
+          "f1-score": 0.6370510396975425,
+          "support": 500.0
+        },
+        "3": {
+          "precision": 0.4117647058823529,
+          "recall": 0.4228187919463087,
+          "f1-score": 0.41721854304635764,
+          "support": 298.0
+        },
+        "4": {
+          "precision": 0.2033898305084746,
+          "recall": 0.2222222222222222,
+          "f1-score": 0.21238938053097345,
+          "support": 108.0
+        },
+        "5": {
+          "precision": 0.32786885245901637,
+          "recall": 0.47619047619047616,
+          "f1-score": 0.3883495145631068,
+          "support": 42.0
+        },
+        "6": {
+          "precision": 0.2857142857142857,
+          "recall": 0.2,
+          "f1-score": 0.23529411764705882,
+          "support": 20.0
+        },
+        "7": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f1-score": 0.16666666666666666,
+          "support": 2.0
+        },
+        "accuracy": 0.46648793565683644,
+        "macro avg": {
+          "precision": 0.3035697170287958,
+          "recall": 0.36604936918839126,
+          "f1-score": 0.30806739281627077,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.4423431044541032,
+          "recall": 0.46648793565683644,
+          "f1-score": 0.4485884403204844,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.46646914132379247,
+      "accuracy_std": 0.02974212556824455,
+      "balanced_accuracy_mean": 0.36604980106801777,
+      "balanced_accuracy_std": 0.0677182156157325,
+      "precision_macro_mean": 0.3061243120533843,
+      "precision_macro_std": 0.06138278743436255,
+      "recall_macro_mean": 0.36604980106801777,
+      "recall_macro_std": 0.0677182156157325,
+      "f1_macro_mean": 0.2917524102089637,
+      "f1_macro_std": 0.023600693994388258,
+      "stability": 0.6209579681466817,
+      "icn": 0.13993518048925058,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS",
+      "experiment_name": "random_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 500,
+        "3": 298,
+        "4": 108,
+        "5": 42,
+        "6": 20,
+        "7": 2
+      },
+      "n_min": 2,
+      "k_outer": 2,
+      "k_inner_requested": 2,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__final_C": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 10.0
+        },
+        "clf__tree_max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        },
+        "clf__n_neighbors": {
+          "dist": "randint",
+          "low": 3,
+          "high": 12
+        }
+      },
+      "best_params_mode": "clf__final_C=0.6847920095574779, clf__n_neighbors=5, clf__tree_max_depth=None (2/2)",
+      "best_params_counts": {
+        "clf__final_C=0.6847920095574779, clf__n_neighbors=5, clf__tree_max_depth=None": 2
+      },
+      "warnings": [
+        "GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo."
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "confusion_matrix": [
+        [
+          73,
+          64,
+          10,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          193,
+          196,
+          86,
+          20,
+          5,
+          0,
+          0
+        ],
+        [
+          31,
+          75,
+          102,
+          78,
+          9,
+          1,
+          2
+        ],
+        [
+          3,
+          8,
+          39,
+          39,
+          14,
+          5,
+          0
+        ],
+        [
+          0,
+          3,
+          3,
+          14,
+          14,
+          6,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          5,
+          4,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.24333333333333335,
+          "recall": 0.4899328859060403,
+          "f1-score": 0.32516703786191536,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.5664739884393064,
+          "recall": 0.392,
+          "f1-score": 0.46335697399527187,
+          "support": 500.0
+        },
+        "3": {
+          "precision": 0.425,
+          "recall": 0.3422818791946309,
+          "f1-score": 0.379182156133829,
+          "support": 298.0
+        },
+        "4": {
+          "precision": 0.25161290322580643,
+          "recall": 0.3611111111111111,
+          "f1-score": 0.2965779467680608,
+          "support": 108.0
+        },
+        "5": {
+          "precision": 0.2916666666666667,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.3111111111111111,
+          "support": 42.0
+        },
+        "6": {
+          "precision": 0.25,
+          "recall": 0.2,
+          "f1-score": 0.2222222222222222,
+          "support": 20.0
+        },
+        "7": {
+          "precision": 0.14285714285714285,
+          "recall": 1.0,
+          "f1-score": 0.25,
+          "support": 2.0
+        },
+        "accuracy": 0.38427167113494193,
+        "macro avg": {
+          "precision": 0.310134862074608,
+          "recall": 0.4455227442207308,
+          "f1-score": 0.32108820687034434,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.43865377008080536,
+          "recall": 0.38427167113494193,
+          "f1-score": 0.39603770109830566,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.38427357526194733,
+      "accuracy_std": 0.0030132904616114713,
+      "balanced_accuracy_mean": 0.44551946193556935,
+      "balanced_accuracy_std": 0.0005158982445926613,
+      "precision_macro_mean": 0.3409948718359964,
+      "precision_macro_std": 0.044270259930953605,
+      "recall_macro_mean": 0.44551946193556935,
+      "recall_macro_std": 0.0005158982445926613,
+      "f1_macro_mean": 0.33011740980018306,
+      "f1_macro_std": 0.021557814133483056,
+      "stability": 0.6568843166922311,
+      "icn": 0.6590795429299476,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS",
+      "experiment_name": "random_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 500,
+        "3": 298,
+        "4": 108,
+        "5": 42,
+        "6": 20,
+        "7": 2
+      },
+      "n_min": 2,
+      "k_outer": 2,
+      "k_inner_requested": 2,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 50,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 0.5
+        },
+        "clf__max_depth": {
+          "dist": "randint",
+          "low": 2,
+          "high": 5
+        },
+        "clf__subsample": {
+          "dist": "uniform",
+          "low": 0.7,
+          "high": 1.0
+        }
+      },
+      "best_params_mode": "clf__learning_rate=0.010944158354662342, clf__max_depth=4, clf__n_estimators=108, clf__subsample=0.8199582915145767 (1/2)",
+      "best_params_counts": {
+        "clf__learning_rate=0.010944158354662342, clf__max_depth=4, clf__n_estimators=108, clf__subsample=0.8199582915145767": 1,
+        "clf__learning_rate=0.12759686136280085, clf__max_depth=2, clf__n_estimators=51, clf__subsample=0.9165996316800474": 1
+      },
+      "warnings": [
+        "GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo."
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          140,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          434,
+          59,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          133,
+          146,
+          16,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          17,
+          51,
+          34,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          7,
+          18,
+          7,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          3,
+          6,
+          10,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.25,
+          "recall": 0.006711409395973154,
+          "f1-score": 0.013071895424836602,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.5969738651994498,
+          "recall": 0.868,
+          "f1-score": 0.7074164629176855,
+          "support": 500.0
+        },
+        "3": {
+          "precision": 0.5367647058823529,
+          "recall": 0.4899328859060403,
+          "f1-score": 0.512280701754386,
+          "support": 298.0
+        },
+        "4": {
+          "precision": 0.4533333333333333,
+          "recall": 0.3148148148148148,
+          "f1-score": 0.37158469945355194,
+          "support": 108.0
+        },
+        "5": {
+          "precision": 0.3684210526315789,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.22950819672131148,
+          "support": 42.0
+        },
+        "6": {
+          "precision": 0.45454545454545453,
+          "recall": 0.5,
+          "f1-score": 0.47619047619047616,
+          "support": 20.0
+        },
+        "7": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "accuracy": 0.5647899910634495,
+        "macro avg": {
+          "precision": 0.38000548737031,
+          "recall": 0.335160825254785,
+          "f1-score": 0.33000749035174964,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.5086840109509397,
+          "recall": 0.5647899910634495,
+          "f1-score": 0.5072474480134394,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5647728724763609,
+      "accuracy_std": 0.0270902492549523,
+      "balanced_accuracy_mean": 0.3351673034491826,
+      "balanced_accuracy_std": 0.037299569930321554,
+      "precision_macro_mean": 0.3755569864813562,
+      "precision_macro_std": 0.022608038735079102,
+      "recall_macro_mean": 0.3351673034491826,
+      "recall_macro_std": 0.037299569930321554,
+      "f1_macro_mean": 0.3275922368644475,
+      "f1_macro_std": 0.016188552358777794,
+      "stability": 0.7513088463191879,
+      "icn": 0.3355629730703813,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    }
+  ],
+  "GDS_R1": [
+    {
+      "target": "GDS_R1",
+      "experiment_name": "grid_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "2": 150,
+        "3": 22
+      },
+      "n_min": 22,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50
+        ],
+        "clf__max_samples": [
+          0.7,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          null
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50 (3/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=25": 2,
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50": 3
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          813,
+          133,
+          1
+        ],
+        [
+          51,
+          90,
+          9
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9398843930635838,
+          "recall": 0.8585005279831045,
+          "f1-score": 0.8973509933774835,
+          "support": 947.0
+        },
+        "2": {
+          "precision": 0.3964757709251101,
+          "recall": 0.6,
+          "f1-score": 0.47745358090185674,
+          "support": 150.0
+        },
+        "3": {
+          "precision": 0.6296296296296297,
+          "recall": 0.7727272727272727,
+          "f1-score": 0.6938775510204082,
+          "support": 22.0
+        },
+        "accuracy": 0.8221626452189454,
+        "macro avg": {
+          "precision": 0.6553299312061078,
+          "recall": 0.7437426002367924,
+          "f1-score": 0.6895607084332495,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8609416780355963,
+          "recall": 0.8221626452189454,
+          "f1-score": 0.8370641054389673,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8221452594490712,
+      "accuracy_std": 0.020273036614482112,
+      "balanced_accuracy_mean": 0.7428190847489092,
+      "balanced_accuracy_std": 0.06297637174177464,
+      "precision_macro_mean": 0.6587960801071224,
+      "precision_macro_std": 0.029728642615844576,
+      "recall_macro_mean": 0.7428190847489092,
+      "recall_macro_std": 0.06297637174177464,
+      "f1_macro_mean": 0.6872646766412907,
+      "f1_macro_std": 0.03299944061836012,
+      "stability": 1.0,
+      "icn": 0.4969717268910325,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R1",
+      "experiment_name": "grid_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "2": 150,
+        "3": 22
+      },
+      "n_min": 22,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.5,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          3
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25 (3/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25": 3,
+        "clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=25": 2
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          869,
+          76,
+          2
+        ],
+        [
+          61,
+          75,
+          14
+        ],
+        [
+          0,
+          6,
+          16
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9344086021505377,
+          "recall": 0.9176346356916578,
+          "f1-score": 0.9259456579648375,
+          "support": 947.0
+        },
+        "2": {
+          "precision": 0.47770700636942676,
+          "recall": 0.5,
+          "f1-score": 0.48859934853420195,
+          "support": 150.0
+        },
+        "3": {
+          "precision": 0.5,
+          "recall": 0.7272727272727273,
+          "f1-score": 0.5925925925925926,
+          "support": 22.0
+        },
+        "accuracy": 0.8579088471849866,
+        "macro avg": {
+          "precision": 0.6373718695066548,
+          "recall": 0.7149691209881284,
+          "f1-score": 0.6690458663638773,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8646478974012272,
+          "recall": 0.8579088471849866,
+          "f1-score": 0.8607662890168619,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8579356181934659,
+      "accuracy_std": 0.04207369563810166,
+      "balanced_accuracy_mean": 0.7125239023484637,
+      "balanced_accuracy_std": 0.08378464420321713,
+      "precision_macro_mean": 0.6689721443140051,
+      "precision_macro_std": 0.09105786887539652,
+      "recall_macro_mean": 0.7125239023484637,
+      "recall_macro_std": 0.08378464420321713,
+      "f1_macro_mean": 0.6758053108991543,
+      "f1_macro_std": 0.08630189498507887,
+      "stability": 1.8760881737023283e-11,
+      "icn": 0.21085492757723623,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R1",
+      "experiment_name": "grid_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "2": 150,
+        "3": 22
+      },
+      "n_min": 22,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__final_C": [
+          0.1,
+          1.0
+        ],
+        "clf__tree_max_depth": [
+          2,
+          null
+        ],
+        "clf__n_neighbors": [
+          3,
+          7
+        ]
+      },
+      "best_params_mode": "clf__final_C=1.0, clf__n_neighbors=3, clf__tree_max_depth=2 (2/5)",
+      "best_params_counts": {
+        "clf__final_C=1.0, clf__n_neighbors=3, clf__tree_max_depth=2": 2,
+        "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=2": 1,
+        "clf__final_C=1.0, clf__n_neighbors=3, clf__tree_max_depth=None": 1,
+        "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=None": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          773,
+          171,
+          3
+        ],
+        [
+          25,
+          109,
+          16
+        ],
+        [
+          0,
+          4,
+          18
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.968671679197995,
+          "recall": 0.8162618796198522,
+          "f1-score": 0.8859598853868195,
+          "support": 947.0
+        },
+        "2": {
+          "precision": 0.38380281690140844,
+          "recall": 0.7266666666666667,
+          "f1-score": 0.5023041474654378,
+          "support": 150.0
+        },
+        "3": {
+          "precision": 0.4864864864864865,
+          "recall": 0.8181818181818182,
+          "f1-score": 0.6101694915254238,
+          "support": 22.0
+        },
+        "accuracy": 0.8042895442359249,
+        "macro avg": {
+          "precision": 0.6129869941952967,
+          "recall": 0.7870367881561124,
+          "f1-score": 0.6661445081258938,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8807910683095758,
+          "recall": 0.8042895442359249,
+          "f1-score": 0.8291093497718436,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8043081358103779,
+      "accuracy_std": 0.022225860689655298,
+      "balanced_accuracy_mean": 0.7843117051888981,
+      "balanced_accuracy_std": 0.08427031611190719,
+      "precision_macro_mean": 0.6195655858854086,
+      "precision_macro_std": 0.05018193298027587,
+      "recall_macro_mean": 0.7843117051888981,
+      "recall_macro_std": 0.08427031611190719,
+      "f1_macro_mean": 0.6664334889096268,
+      "f1_macro_std": 0.0587262214902894,
+      "stability": 0.5173434098466196,
+      "icn": 0.6160710957044087,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R1",
+      "experiment_name": "grid_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "2": 150,
+        "3": 22
+      },
+      "n_min": 22,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.05,
+          0.1
+        ],
+        "clf__max_depth": [
+          2,
+          3
+        ],
+        "clf__subsample": [
+          0.8,
+          1.0
+        ]
+      },
+      "best_params_mode": "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=0.8 (1/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=0.8": 1,
+        "clf__learning_rate=0.05, clf__max_depth=3, clf__n_estimators=100, clf__subsample=0.8": 1,
+        "clf__learning_rate=0.05, clf__max_depth=2, clf__n_estimators=100, clf__subsample=0.8": 1,
+        "clf__learning_rate=0.05, clf__max_depth=3, clf__n_estimators=50, clf__subsample=1.0": 1,
+        "clf__learning_rate=0.05, clf__max_depth=3, clf__n_estimators=100, clf__subsample=1.0": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          918,
+          28,
+          1
+        ],
+        [
+          74,
+          69,
+          7
+        ],
+        [
+          0,
+          6,
+          16
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9254032258064516,
+          "recall": 0.9693769799366421,
+          "f1-score": 0.9468798349664775,
+          "support": 947.0
+        },
+        "2": {
+          "precision": 0.6699029126213593,
+          "recall": 0.46,
+          "f1-score": 0.5454545454545454,
+          "support": 150.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "recall": 0.7272727272727273,
+          "f1-score": 0.6956521739130435,
+          "support": 22.0
+        },
+        "accuracy": 0.8963360142984808,
+        "macro avg": {
+          "precision": 0.7539909350314925,
+          "recall": 0.7188832357364564,
+          "f1-score": 0.7293288514446887,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8860669869513674,
+          "recall": 0.8963360142984808,
+          "f1-score": 0.8881302353507803,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8963444907110827,
+      "accuracy_std": 0.028619583501689756,
+      "balanced_accuracy_mean": 0.719789288034902,
+      "balanced_accuracy_std": 0.07196150395600347,
+      "precision_macro_mean": 0.7543300084412443,
+      "precision_macro_std": 0.07618789317012546,
+      "recall_macro_mean": 0.719789288034902,
+      "recall_macro_std": 0.07196150395600347,
+      "f1_macro_mean": 0.7264923331430235,
+      "f1_macro_std": 0.06609047356949868,
+      "stability": 0.3791836915641301,
+      "icn": 0.553963922095826,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R1",
+      "experiment_name": "random_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "2": 150,
+        "3": 22
+      },
+      "n_min": 22,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__max_samples": {
+          "dist": "uniform",
+          "low": 0.6,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=None, clf__max_samples=0.8446612641953124, clf__n_estimators=149 (1/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=None, clf__max_samples=0.8446612641953124, clf__n_estimators=149": 1,
+        "clf__estimator__max_depth=4, clf__max_samples=0.7599443886861021, clf__n_estimators=116": 1,
+        "clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663, clf__n_estimators=115": 1,
+        "clf__estimator__max_depth=3, clf__max_samples=0.6225646316108401, clf__n_estimators=112": 1,
+        "clf__estimator__max_depth=None, clf__max_samples=0.7465447373174767, clf__n_estimators=86": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          811,
+          134,
+          2
+        ],
+        [
+          49,
+          91,
+          10
+        ],
+        [
+          1,
+          5,
+          16
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9419279907084785,
+          "recall": 0.856388595564942,
+          "f1-score": 0.8971238938053098,
+          "support": 947.0
+        },
+        "2": {
+          "precision": 0.39565217391304347,
+          "recall": 0.6066666666666667,
+          "f1-score": 0.4789473684210526,
+          "support": 150.0
+        },
+        "3": {
+          "precision": 0.5714285714285714,
+          "recall": 0.7272727272727273,
+          "f1-score": 0.64,
+          "support": 22.0
+        },
+        "accuracy": 0.8203753351206434,
+        "macro avg": {
+          "precision": 0.6363362453500311,
+          "recall": 0.7301093298347787,
+          "f1-score": 0.6720237540754542,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8614164985337929,
+          "recall": 0.8203753351206434,
+          "f1-score": 0.8360128978523559,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8204075912876363,
+      "accuracy_std": 0.026828751702817143,
+      "balanced_accuracy_mean": 0.7310210711965098,
+      "balanced_accuracy_std": 0.03806168470130772,
+      "precision_macro_mean": 0.6477296592273454,
+      "precision_macro_std": 0.06022292841594349,
+      "recall_macro_mean": 0.7310210711965098,
+      "recall_macro_std": 0.03806168470130772,
+      "f1_macro_mean": 0.6724920676049708,
+      "f1_macro_std": 0.04748852869281058,
+      "stability": 0.7281722155889053,
+      "icn": 0.33608617022298093,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R1",
+      "experiment_name": "random_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "2": 150,
+        "3": 22
+      },
+      "n_min": 22,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "uniform",
+          "low": 0.5,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=3, clf__learning_rate=0.5115312125207079, clf__n_estimators=115 (2/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5115312125207079, clf__n_estimators=115": 2,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.6831809216468459, clf__n_estimators=86": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.9692763545078751, clf__n_estimators=26": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.8058265802441404, clf__n_estimators=149": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          823,
+          121,
+          3
+        ],
+        [
+          43,
+          92,
+          15
+        ],
+        [
+          0,
+          6,
+          16
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9503464203233256,
+          "recall": 0.8690601900739177,
+          "f1-score": 0.9078874793160507,
+          "support": 947.0
+        },
+        "2": {
+          "precision": 0.4200913242009132,
+          "recall": 0.6133333333333333,
+          "f1-score": 0.4986449864498645,
+          "support": 150.0
+        },
+        "3": {
+          "precision": 0.47058823529411764,
+          "recall": 0.7272727272727273,
+          "f1-score": 0.5714285714285714,
+          "support": 22.0
+        },
+        "accuracy": 0.8319928507596068,
+        "macro avg": {
+          "precision": 0.6136753266061188,
+          "recall": 0.7365554168933262,
+          "f1-score": 0.6593203457314956,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8698344055878436,
+          "recall": 0.8319928507596068,
+          "f1-score": 0.8464143158634568,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8320467648942985,
+      "accuracy_std": 0.07444395250486763,
+      "balanced_accuracy_mean": 0.737425972338253,
+      "balanced_accuracy_std": 0.07294702055934069,
+      "precision_macro_mean": 0.6343379376853712,
+      "precision_macro_std": 0.06016797185120174,
+      "recall_macro_mean": 0.737425972338253,
+      "recall_macro_std": 0.07294702055934069,
+      "f1_macro_mean": 0.6629748008994405,
+      "f1_macro_std": 0.061090130417469225,
+      "stability": 0.4729944402687486,
+      "icn": 0.3126635609071685,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R1",
+      "experiment_name": "random_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "2": 150,
+        "3": 22
+      },
+      "n_min": 22,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__final_C": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 10.0
+        },
+        "clf__tree_max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        },
+        "clf__n_neighbors": {
+          "dist": "randint",
+          "low": 3,
+          "high": 12
+        }
+      },
+      "best_params_mode": "clf__final_C=3.800329214045199, clf__n_neighbors=9, clf__tree_max_depth=2 (2/5)",
+      "best_params_counts": {
+        "clf__final_C=3.800329214045199, clf__n_neighbors=9, clf__tree_max_depth=2": 2,
+        "clf__final_C=0.6847920095574779, clf__n_neighbors=5, clf__tree_max_depth=None": 1,
+        "clf__final_C=0.19762189340280073, clf__n_neighbors=3, clf__tree_max_depth=4": 1,
+        "clf__final_C=0.6173770394704572, clf__n_neighbors=5, clf__tree_max_depth=4": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          781,
+          163,
+          3
+        ],
+        [
+          29,
+          99,
+          22
+        ],
+        [
+          0,
+          4,
+          18
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9641975308641976,
+          "recall": 0.8247096092925026,
+          "f1-score": 0.8890153671030165,
+          "support": 947.0
+        },
+        "2": {
+          "precision": 0.37218045112781956,
+          "recall": 0.66,
+          "f1-score": 0.47596153846153844,
+          "support": 150.0
+        },
+        "3": {
+          "precision": 0.4186046511627907,
+          "recall": 0.8181818181818182,
+          "f1-score": 0.5538461538461539,
+          "support": 22.0
+        },
+        "accuracy": 0.8025022341376229,
+        "macro avg": {
+          "precision": 0.5849942110516027,
+          "recall": 0.7676304758247737,
+          "f1-score": 0.6396076864702362,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8741120926927162,
+          "recall": 0.8025022341376229,
+          "f1-score": 0.82705665665809,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8025144138372837,
+      "accuracy_std": 0.03692495703654034,
+      "balanced_accuracy_mean": 0.7648909310312819,
+      "balanced_accuracy_std": 0.07284834920421956,
+      "precision_macro_mean": 0.590888390783346,
+      "precision_macro_std": 0.029498409078252193,
+      "recall_macro_mean": 0.7648909310312819,
+      "recall_macro_std": 0.07284834920421956,
+      "f1_macro_mean": 0.6391354818016785,
+      "f1_macro_std": 0.04050547604717937,
+      "stability": 0.85918030383672,
+      "icn": 0.3712203907254923,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R1",
+      "experiment_name": "random_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "2": 150,
+        "3": 22
+      },
+      "n_min": 22,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 50,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 0.5
+        },
+        "clf__max_depth": {
+          "dist": "randint",
+          "low": 2,
+          "high": 5
+        },
+        "clf__subsample": {
+          "dist": "uniform",
+          "low": 0.7,
+          "high": 1.0
+        }
+      },
+      "best_params_mode": "clf__learning_rate=0.0602906674791436, clf__max_depth=2, clf__n_estimators=149, clf__subsample=0.7428600453765822 (2/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.0602906674791436, clf__max_depth=2, clf__n_estimators=149, clf__subsample=0.7428600453765822": 2,
+        "clf__learning_rate=0.012002827428180858, clf__max_depth=4, clf__n_estimators=111, clf__subsample=0.7271819303598462": 1,
+        "clf__learning_rate=0.043284502212938815, clf__max_depth=2, clf__n_estimators=64, clf__subsample=0.9195981825434215": 1,
+        "clf__learning_rate=0.0451659424678903, clf__max_depth=3, clf__n_estimators=102, clf__subsample=0.7692681476866446": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          926,
+          20,
+          1
+        ],
+        [
+          77,
+          66,
+          7
+        ],
+        [
+          0,
+          6,
+          16
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9232303090727817,
+          "recall": 0.9778247096092925,
+          "f1-score": 0.9497435897435897,
+          "support": 947.0
+        },
+        "2": {
+          "precision": 0.717391304347826,
+          "recall": 0.44,
+          "f1-score": 0.5454545454545454,
+          "support": 150.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "recall": 0.7272727272727273,
+          "f1-score": 0.6956521739130435,
+          "support": 22.0
+        },
+        "accuracy": 0.900804289544236,
+        "macro avg": {
+          "precision": 0.7690960933624248,
+          "recall": 0.7150324789606732,
+          "f1-score": 0.7302834363703928,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8905938025118542,
+          "recall": 0.900804289544236,
+          "f1-score": 0.8905538061943238,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.9008047725816783,
+      "accuracy_std": 0.03066807709387296,
+      "balanced_accuracy_mean": 0.7159333518982641,
+      "balanced_accuracy_std": 0.05091403578076801,
+      "precision_macro_mean": 0.7665844897344616,
+      "precision_macro_std": 0.06944322566562786,
+      "recall_macro_mean": 0.7159333518982641,
+      "recall_macro_std": 0.05091403578076801,
+      "f1_macro_mean": 0.727277531002066,
+      "f1_macro_std": 0.052589973533351826,
+      "stability": 0.6324647120404233,
+      "icn": 0.5529952826116281,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    }
+  ],
+  "GDS_R2": [
+    {
+      "target": "GDS_R2",
+      "experiment_name": "grid_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 649,
+        "2": 298,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50
+        ],
+        "clf__max_samples": [
+          0.7,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          null
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=2, clf__max_samples=0.7, clf__n_estimators=50 (2/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=2, clf__max_samples=1.0, clf__n_estimators=25": 1,
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=25": 1,
+        "clf__estimator__max_depth=2, clf__max_samples=0.7, clf__n_estimators=50": 2,
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          469,
+          169,
+          11
+        ],
+        [
+          93,
+          153,
+          52
+        ],
+        [
+          8,
+          54,
+          110
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.8228070175438597,
+          "recall": 0.7226502311248074,
+          "f1-score": 0.7694831829368335,
+          "support": 649.0
+        },
+        "2": {
+          "precision": 0.40691489361702127,
+          "recall": 0.5134228187919463,
+          "f1-score": 0.4540059347181009,
+          "support": 298.0
+        },
+        "3": {
+          "precision": 0.6358381502890174,
+          "recall": 0.6395348837209303,
+          "f1-score": 0.6376811594202898,
+          "support": 172.0
+        },
+        "accuracy": 0.6541554959785523,
+        "macro avg": {
+          "precision": 0.6218533538166328,
+          "recall": 0.6252026445458946,
+          "f1-score": 0.6203900923584081,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.683312381173859,
+          "recall": 0.6541554959785523,
+          "f1-score": 0.6652095743452091,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6541239590006407,
+      "accuracy_std": 0.02222187082731714,
+      "balanced_accuracy_mean": 0.6247166830711546,
+      "balanced_accuracy_std": 0.04876632004816757,
+      "precision_macro_mean": 0.6217492673620987,
+      "precision_macro_std": 0.0353429470363903,
+      "recall_macro_mean": 0.6247166830711546,
+      "recall_macro_std": 0.04876632004816757,
+      "f1_macro_mean": 0.6189147571130355,
+      "f1_macro_std": 0.039886522155933385,
+      "stability": 0.1299124547706486,
+      "icn": 0.006495622738532431,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R2",
+      "experiment_name": "grid_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 649,
+        "2": 298,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.5,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          3
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25 (3/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25": 3,
+        "clf__estimator__max_depth=2, clf__learning_rate=1.0, clf__n_estimators=25": 1,
+        "clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=25": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          512,
+          125,
+          12
+        ],
+        [
+          93,
+          147,
+          58
+        ],
+        [
+          9,
+          47,
+          116
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.8338762214983714,
+          "recall": 0.7889060092449923,
+          "f1-score": 0.8107680126682502,
+          "support": 649.0
+        },
+        "2": {
+          "precision": 0.4608150470219436,
+          "recall": 0.49328859060402686,
+          "f1-score": 0.47649918962722854,
+          "support": 298.0
+        },
+        "3": {
+          "precision": 0.6236559139784946,
+          "recall": 0.6744186046511628,
+          "f1-score": 0.6480446927374302,
+          "support": 172.0
+        },
+        "accuracy": 0.6925826630920465,
+        "macro avg": {
+          "precision": 0.6394490608329365,
+          "recall": 0.6522044015000606,
+          "f1-score": 0.6451039650109697,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7022139132880101,
+          "recall": 0.6925826630920465,
+          "f1-score": 0.696737163432928,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6925328315182575,
+      "accuracy_std": 0.04573269763952786,
+      "balanced_accuracy_mean": 0.6517987327734829,
+      "balanced_accuracy_std": 0.04178560481333057,
+      "precision_macro_mean": 0.6416580990992562,
+      "precision_macro_std": 0.02789643101138653,
+      "recall_macro_mean": 0.6517987327734829,
+      "recall_macro_std": 0.04178560481333057,
+      "f1_macro_mean": 0.644921262713496,
+      "f1_macro_std": 0.03349554937271886,
+      "stability": 0.5227644506137612,
+      "icn": 0.556274459802134,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R2",
+      "experiment_name": "grid_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 649,
+        "2": 298,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__final_C": [
+          0.1,
+          1.0
+        ],
+        "clf__tree_max_depth": [
+          2,
+          null
+        ],
+        "clf__n_neighbors": [
+          3,
+          7
+        ]
+      },
+      "best_params_mode": "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=None (1/5)",
+      "best_params_counts": {
+        "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=None": 1,
+        "clf__final_C=0.1, clf__n_neighbors=7, clf__tree_max_depth=None": 1,
+        "clf__final_C=1.0, clf__n_neighbors=3, clf__tree_max_depth=None": 1,
+        "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=2": 1,
+        "clf__final_C=0.1, clf__n_neighbors=3, clf__tree_max_depth=None": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          514,
+          126,
+          9
+        ],
+        [
+          85,
+          146,
+          67
+        ],
+        [
+          6,
+          44,
+          122
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.8495867768595041,
+          "recall": 0.7919876733436055,
+          "f1-score": 0.8197767145135566,
+          "support": 649.0
+        },
+        "2": {
+          "precision": 0.4620253164556962,
+          "recall": 0.4899328859060403,
+          "f1-score": 0.4755700325732899,
+          "support": 298.0
+        },
+        "3": {
+          "precision": 0.6161616161616161,
+          "recall": 0.7093023255813954,
+          "f1-score": 0.6594594594594595,
+          "support": 172.0
+        },
+        "accuracy": 0.6988382484361036,
+        "macro avg": {
+          "precision": 0.6425912364922721,
+          "recall": 0.6637409616103471,
+          "f1-score": 0.6516020688487686,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7104961219530058,
+          "recall": 0.6988382484361036,
+          "f1-score": 0.7034691550072973,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6988028507367072,
+      "accuracy_std": 0.03118254862019512,
+      "balanced_accuracy_mean": 0.6634298968670274,
+      "balanced_accuracy_std": 0.031206216392553107,
+      "precision_macro_mean": 0.6445522233585778,
+      "precision_macro_std": 0.022183184211782916,
+      "recall_macro_mean": 0.6634298968670274,
+      "recall_macro_std": 0.031206216392553107,
+      "f1_macro_mean": 0.651418398097328,
+      "f1_macro_std": 0.025731812801229187,
+      "stability": 1.0,
+      "icn": 0.766842920162245,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R2",
+      "experiment_name": "grid_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 649,
+        "2": 298,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.05,
+          0.1
+        ],
+        "clf__max_depth": [
+          2,
+          3
+        ],
+        "clf__subsample": [
+          0.8,
+          1.0
+        ]
+      },
+      "best_params_mode": "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=1.0 (1/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=1.0": 1,
+        "clf__learning_rate=0.05, clf__max_depth=2, clf__n_estimators=50, clf__subsample=0.8": 1,
+        "clf__learning_rate=0.1, clf__max_depth=2, clf__n_estimators=50, clf__subsample=0.8": 1,
+        "clf__learning_rate=0.1, clf__max_depth=2, clf__n_estimators=100, clf__subsample=1.0": 1,
+        "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=0.8": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          588,
+          57,
+          4
+        ],
+        [
+          135,
+          140,
+          23
+        ],
+        [
+          15,
+          58,
+          99
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.7967479674796748,
+          "recall": 0.9060092449922958,
+          "f1-score": 0.8478731074260994,
+          "support": 649.0
+        },
+        "2": {
+          "precision": 0.5490196078431373,
+          "recall": 0.4697986577181208,
+          "f1-score": 0.5063291139240507,
+          "support": 298.0
+        },
+        "3": {
+          "precision": 0.7857142857142857,
+          "recall": 0.5755813953488372,
+          "f1-score": 0.6644295302013423,
+          "support": 172.0
+        },
+        "accuracy": 0.7390527256478999,
+        "macro avg": {
+          "precision": 0.7104939536790326,
+          "recall": 0.6504630993530847,
+          "f1-score": 0.6728772505171641,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.729079652524058,
+          "recall": 0.7390527256478999,
+          "f1-score": 0.7287199301729548,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.7390174567584882,
+      "accuracy_std": 0.0356052974582576,
+      "balanced_accuracy_mean": 0.6501658148478153,
+      "balanced_accuracy_std": 0.037784139310013704,
+      "precision_macro_mean": 0.7125593471239319,
+      "precision_macro_std": 0.04549740105593887,
+      "recall_macro_mean": 0.6501658148478153,
+      "recall_macro_std": 0.037784139310013704,
+      "f1_macro_mean": 0.6726992754202852,
+      "f1_macro_std": 0.04012016097512842,
+      "stability": 0.11555071680983842,
+      "icn": 0.8015966677590072,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R2",
+      "experiment_name": "random_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 649,
+        "2": 298,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__max_samples": {
+          "dist": "uniform",
+          "low": 0.6,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=4, clf__max_samples=0.7783331011414365, clf__n_estimators=111 (2/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=4, clf__max_samples=0.7783331011414365, clf__n_estimators=111": 2,
+        "clf__estimator__max_depth=4, clf__max_samples=0.9118764001091078, clf__n_estimators=45": 1,
+        "clf__estimator__max_depth=3, clf__max_samples=0.6225646316108401, clf__n_estimators=112": 2
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          504,
+          143,
+          2
+        ],
+        [
+          88,
+          166,
+          44
+        ],
+        [
+          6,
+          54,
+          112
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.842809364548495,
+          "recall": 0.7765793528505393,
+          "f1-score": 0.8083400160384924,
+          "support": 649.0
+        },
+        "2": {
+          "precision": 0.4573002754820937,
+          "recall": 0.5570469798657718,
+          "f1-score": 0.5022692889561271,
+          "support": 298.0
+        },
+        "3": {
+          "precision": 0.7088607594936709,
+          "recall": 0.6511627906976745,
+          "f1-score": 0.6787878787878788,
+          "support": 172.0
+        },
+        "accuracy": 0.6988382484361036,
+        "macro avg": {
+          "precision": 0.6696567998414199,
+          "recall": 0.6615963744713286,
+          "f1-score": 0.6631323945941662,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7195556839307852,
+          "recall": 0.6988382484361036,
+          "f1-score": 0.7069172776312981,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6987868353619474,
+      "accuracy_std": 0.03372998426050836,
+      "balanced_accuracy_mean": 0.6611995886152486,
+      "balanced_accuracy_std": 0.039745689447463206,
+      "precision_macro_mean": 0.670675961868614,
+      "precision_macro_std": 0.03463928432166813,
+      "recall_macro_mean": 0.6611995886152486,
+      "recall_macro_std": 0.039745689447463206,
+      "f1_macro_mean": 0.6621149464331272,
+      "f1_macro_std": 0.0354891908193063,
+      "stability": 0.40021565438911366,
+      "icn": 0.8192473138510282,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R2",
+      "experiment_name": "random_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 649,
+        "2": 298,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "uniform",
+          "low": 0.5,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=3, clf__learning_rate=0.5282057895135501, clf__n_estimators=112 (3/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5714334089609704, clf__n_estimators=27": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5282057895135501, clf__n_estimators=112": 3,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5115312125207079, clf__n_estimators=115": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          506,
+          133,
+          10
+        ],
+        [
+          100,
+          147,
+          51
+        ],
+        [
+          10,
+          47,
+          115
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.8214285714285714,
+          "recall": 0.7796610169491526,
+          "f1-score": 0.8,
+          "support": 649.0
+        },
+        "2": {
+          "precision": 0.44954128440366975,
+          "recall": 0.49328859060402686,
+          "f1-score": 0.4704,
+          "support": 298.0
+        },
+        "3": {
+          "precision": 0.6534090909090909,
+          "recall": 0.6686046511627907,
+          "f1-score": 0.6609195402298851,
+          "support": 172.0
+        },
+        "accuracy": 0.6863270777479893,
+        "macro avg": {
+          "precision": 0.6414596489137773,
+          "recall": 0.6471847529053233,
+          "f1-score": 0.6437731800766283,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.6965655131776587,
+          "recall": 0.6863270777479893,
+          "f1-score": 0.6908466138691156,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6862788276745677,
+      "accuracy_std": 0.03940134901944085,
+      "balanced_accuracy_mean": 0.6467664125775837,
+      "balanced_accuracy_std": 0.03884585443461393,
+      "precision_macro_mean": 0.6416803824940226,
+      "precision_macro_std": 0.029887215422843876,
+      "recall_macro_mean": 0.6467664125775837,
+      "recall_macro_std": 0.03884585443461393,
+      "f1_macro_mean": 0.6427407145271483,
+      "f1_macro_std": 0.03319090737268264,
+      "stability": 0.5414907418672925,
+      "icn": 0.4825230136592841,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R2",
+      "experiment_name": "random_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 649,
+        "2": 298,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__final_C": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 10.0
+        },
+        "clf__tree_max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        },
+        "clf__n_neighbors": {
+          "dist": "randint",
+          "low": 3,
+          "high": 12
+        }
+      },
+      "best_params_mode": "clf__final_C=0.13292918943162169, clf__n_neighbors=10, clf__tree_max_depth=2 (2/5)",
+      "best_params_counts": {
+        "clf__final_C=0.6358358856676253, clf__n_neighbors=10, clf__tree_max_depth=4": 1,
+        "clf__final_C=0.34890188454913873, clf__n_neighbors=11, clf__tree_max_depth=4": 1,
+        "clf__final_C=0.13292918943162169, clf__n_neighbors=10, clf__tree_max_depth=2": 2,
+        "clf__final_C=0.6173770394704572, clf__n_neighbors=5, clf__tree_max_depth=4": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          506,
+          134,
+          9
+        ],
+        [
+          84,
+          150,
+          64
+        ],
+        [
+          6,
+          47,
+          119
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.8489932885906041,
+          "recall": 0.7796610169491526,
+          "f1-score": 0.8128514056224899,
+          "support": 649.0
+        },
+        "2": {
+          "precision": 0.45317220543806647,
+          "recall": 0.5033557046979866,
+          "f1-score": 0.4769475357710652,
+          "support": 298.0
+        },
+        "3": {
+          "precision": 0.6197916666666666,
+          "recall": 0.6918604651162791,
+          "f1-score": 0.6538461538461539,
+          "support": 172.0
+        },
+        "accuracy": 0.6925826630920465,
+        "macro avg": {
+          "precision": 0.6406523868984456,
+          "recall": 0.6582923955878061,
+          "f1-score": 0.6478816984132364,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.708352214640315,
+          "recall": 0.6925826630920465,
+          "f1-score": 0.6989566276767756,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6925488468930173,
+      "accuracy_std": 0.030651000360707396,
+      "balanced_accuracy_mean": 0.6578963306010074,
+      "balanced_accuracy_std": 0.0393068584858416,
+      "precision_macro_mean": 0.643259804834947,
+      "precision_macro_std": 0.027175085596595223,
+      "recall_macro_mean": 0.6578963306010074,
+      "recall_macro_std": 0.0393068584858416,
+      "f1_macro_mean": 0.6475196018183065,
+      "f1_macro_std": 0.031248046069800393,
+      "stability": 0.6609180914076138,
+      "icn": 0.6551481058404056,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R2",
+      "experiment_name": "random_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 649,
+        "2": 298,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 50,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 0.5
+        },
+        "clf__max_depth": {
+          "dist": "randint",
+          "low": 2,
+          "high": 5
+        },
+        "clf__subsample": {
+          "dist": "uniform",
+          "low": 0.7,
+          "high": 1.0
+        }
+      },
+      "best_params_mode": "clf__learning_rate=0.0451659424678903, clf__max_depth=3, clf__n_estimators=102, clf__subsample=0.7692681476866446 (1/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.0451659424678903, clf__max_depth=3, clf__n_estimators=102, clf__subsample=0.7692681476866446": 1,
+        "clf__learning_rate=0.010944158354662342, clf__max_depth=4, clf__n_estimators=108, clf__subsample=0.8199582915145767": 1,
+        "clf__learning_rate=0.012002827428180858, clf__max_depth=4, clf__n_estimators=111, clf__subsample=0.7271819303598462": 1,
+        "clf__learning_rate=0.0602906674791436, clf__max_depth=2, clf__n_estimators=149, clf__subsample=0.7428600453765822": 1,
+        "clf__learning_rate=0.12759686136280085, clf__max_depth=2, clf__n_estimators=51, clf__subsample=0.9165996316800474": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          590,
+          57,
+          2
+        ],
+        [
+          138,
+          136,
+          24
+        ],
+        [
+          17,
+          57,
+          98
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.7919463087248322,
+          "recall": 0.9090909090909091,
+          "f1-score": 0.8464849354375896,
+          "support": 649.0
+        },
+        "2": {
+          "precision": 0.544,
+          "recall": 0.4563758389261745,
+          "f1-score": 0.49635036496350365,
+          "support": 298.0
+        },
+        "3": {
+          "precision": 0.7903225806451613,
+          "recall": 0.5697674418604651,
+          "f1-score": 0.6621621621621622,
+          "support": 172.0
+        },
+        "accuracy": 0.7363717605004468,
+        "macro avg": {
+          "precision": 0.7087562964566644,
+          "recall": 0.6450780632925163,
+          "f1-score": 0.6683324875210852,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7256663433721035,
+          "recall": 0.7363717605004468,
+          "f1-score": 0.7249088684093045,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.7363308776425368,
+      "accuracy_std": 0.03710093599876354,
+      "balanced_accuracy_mean": 0.6447753454291979,
+      "balanced_accuracy_std": 0.0381020719953932,
+      "precision_macro_mean": 0.7123256310580843,
+      "precision_macro_std": 0.053706102571674796,
+      "recall_macro_mean": 0.6447753454291979,
+      "recall_macro_std": 0.0381020719953932,
+      "f1_macro_mean": 0.6682975901477817,
+      "f1_macro_std": 0.04199995665806717,
+      "stability": 6.146971820442104e-11,
+      "icn": 0.7001675765027706,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    }
+  ],
+  "GDS_R3": [
+    {
+      "target": "GDS_R3",
+      "experiment_name": "grid_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50
+        ],
+        "clf__max_samples": [
+          0.7,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          null
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=2, clf__max_samples=0.7, clf__n_estimators=50 (3/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=2, clf__max_samples=0.7, clf__n_estimators=50": 3,
+        "clf__estimator__max_depth=2, clf__max_samples=0.7, clf__n_estimators=25": 2
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          806,
+          141
+        ],
+        [
+          37,
+          135
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9561091340450771,
+          "recall": 0.8511087645195353,
+          "f1-score": 0.9005586592178771,
+          "support": 947.0
+        },
+        "3": {
+          "precision": 0.4891304347826087,
+          "recall": 0.7848837209302325,
+          "f1-score": 0.6026785714285714,
+          "support": 172.0
+        },
+        "accuracy": 0.840929401251117,
+        "macro avg": {
+          "precision": 0.7226197844138429,
+          "recall": 0.8179962427248839,
+          "f1-score": 0.7516186153232243,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8843304599850731,
+          "recall": 0.840929401251117,
+          "f1-score": 0.8547719075648292,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8409393017296605,
+      "accuracy_std": 0.04082124965213341,
+      "balanced_accuracy_mean": 0.8180598555211558,
+      "balanced_accuracy_std": 0.03814131549955168,
+      "precision_macro_mean": 0.7317866523063563,
+      "precision_macro_std": 0.05005670068209613,
+      "recall_macro_mean": 0.8180598555211558,
+      "recall_macro_std": 0.03814131549955168,
+      "f1_macro_mean": 0.7535105909710942,
+      "f1_macro_std": 0.043311876923397497,
+      "stability": 0.5076872880377938,
+      "icn": 0.35572318941874925,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R3",
+      "experiment_name": "grid_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.5,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          3
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=25 (3/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=1.0, clf__n_estimators=25": 1,
+        "clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=25": 3,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          885,
+          62
+        ],
+        [
+          57,
+          115
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9394904458598726,
+          "recall": 0.9345300950369588,
+          "f1-score": 0.9370037056643726,
+          "support": 947.0
+        },
+        "3": {
+          "precision": 0.6497175141242938,
+          "recall": 0.6686046511627907,
+          "f1-score": 0.6590257879656161,
+          "support": 172.0
+        },
+        "accuracy": 0.8936550491510277,
+        "macro avg": {
+          "precision": 0.7946039799920832,
+          "recall": 0.8015673730998747,
+          "f1-score": 0.7980147468149943,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8949498343687917,
+          "recall": 0.8936550491510277,
+          "f1-score": 0.8942760900752875,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8936699231262011,
+      "accuracy_std": 0.026797320823109986,
+      "balanced_accuracy_mean": 0.8016267793667176,
+      "balanced_accuracy_std": 0.032621579615543475,
+      "precision_macro_mean": 0.8002218481726256,
+      "precision_macro_std": 0.05156850423914759,
+      "recall_macro_mean": 0.8016267793667176,
+      "recall_macro_std": 0.032621579615543475,
+      "f1_macro_mean": 0.7992878116432239,
+      "f1_macro_std": 0.038980532534096446,
+      "stability": 0.6020957348865363,
+      "icn": 0.7032053224800664,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R3",
+      "experiment_name": "grid_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__final_C": [
+          0.1,
+          1.0
+        ],
+        "clf__tree_max_depth": [
+          2,
+          null
+        ],
+        "clf__n_neighbors": [
+          3,
+          7
+        ]
+      },
+      "best_params_mode": "clf__final_C=0.1, clf__n_neighbors=3, clf__tree_max_depth=2 (2/5)",
+      "best_params_counts": {
+        "clf__final_C=0.1, clf__n_neighbors=3, clf__tree_max_depth=2": 2,
+        "clf__final_C=1.0, clf__n_neighbors=3, clf__tree_max_depth=2": 1,
+        "clf__final_C=0.1, clf__n_neighbors=7, clf__tree_max_depth=2": 1,
+        "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=2": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          840,
+          107
+        ],
+        [
+          35,
+          137
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.96,
+          "recall": 0.8870116156282999,
+          "f1-score": 0.9220636663007684,
+          "support": 947.0
+        },
+        "3": {
+          "precision": 0.5614754098360656,
+          "recall": 0.7965116279069767,
+          "f1-score": 0.6586538461538461,
+          "support": 172.0
+        },
+        "accuracy": 0.8731009830205541,
+        "macro avg": {
+          "precision": 0.7607377049180328,
+          "recall": 0.8417616217676382,
+          "f1-score": 0.7903587562273073,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8987433158997349,
+          "recall": 0.8731009830205541,
+          "f1-score": 0.8815752935882835,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8730781550288278,
+      "accuracy_std": 0.01770670731169433,
+      "balanced_accuracy_mean": 0.8419794584500467,
+      "balanced_accuracy_std": 0.021943224602905296,
+      "precision_macro_mean": 0.7625181745628672,
+      "precision_macro_std": 0.021383477569797936,
+      "recall_macro_mean": 0.8419794584500467,
+      "recall_macro_std": 0.021943224602905296,
+      "f1_macro_mean": 0.7907017770422231,
+      "f1_macro_std": 0.021294401434910668,
+      "stability": 0.9875927117516833,
+      "icn": 0.8246653941108455,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R3",
+      "experiment_name": "grid_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.05,
+          0.1
+        ],
+        "clf__max_depth": [
+          2,
+          3
+        ],
+        "clf__subsample": [
+          0.8,
+          1.0
+        ]
+      },
+      "best_params_mode": "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=100, clf__subsample=1.0 (2/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.1, clf__max_depth=2, clf__n_estimators=50, clf__subsample=0.8": 1,
+        "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=100, clf__subsample=1.0": 2,
+        "clf__learning_rate=0.1, clf__max_depth=2, clf__n_estimators=100, clf__subsample=0.8": 1,
+        "clf__learning_rate=0.05, clf__max_depth=2, clf__n_estimators=100, clf__subsample=0.8": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          917,
+          30
+        ],
+        [
+          76,
+          96
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9234642497482377,
+          "recall": 0.9683210137275607,
+          "f1-score": 0.945360824742268,
+          "support": 947.0
+        },
+        "3": {
+          "precision": 0.7619047619047619,
+          "recall": 0.5581395348837209,
+          "f1-score": 0.6442953020134228,
+          "support": 172.0
+        },
+        "accuracy": 0.9052725647899911,
+        "macro avg": {
+          "precision": 0.8426845058264998,
+          "recall": 0.7632302743056408,
+          "f1-score": 0.7948280633778454,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8986311559957105,
+          "recall": 0.9052725647899911,
+          "f1-score": 0.8990844441262168,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.9052890775144139,
+      "accuracy_std": 0.028599690477198018,
+      "balanced_accuracy_mean": 0.7633117106491719,
+      "balanced_accuracy_std": 0.058026408090372364,
+      "precision_macro_mean": 0.8438151498711803,
+      "precision_macro_std": 0.06961401073338505,
+      "recall_macro_mean": 0.7633117106491719,
+      "recall_macro_std": 0.058026408090372364,
+      "f1_macro_mean": 0.7945242840781379,
+      "f1_macro_std": 0.061824721774237285,
+      "stability": 0.10417078784059741,
+      "icn": 0.4831503309303227,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R3",
+      "experiment_name": "random_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__max_samples": {
+          "dist": "uniform",
+          "low": 0.6,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=4, clf__max_samples=0.7783331011414365, clf__n_estimators=111 (3/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=4, clf__max_samples=0.7783331011414365, clf__n_estimators=111": 3,
+        "clf__estimator__max_depth=3, clf__max_samples=0.6225646316108401, clf__n_estimators=112": 1,
+        "clf__estimator__max_depth=4, clf__max_samples=0.7836995567863468, clf__n_estimators=141": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          815,
+          132
+        ],
+        [
+          32,
+          140
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9622195985832349,
+          "recall": 0.8606124604012672,
+          "f1-score": 0.9085841694537347,
+          "support": 947.0
+        },
+        "3": {
+          "precision": 0.5147058823529411,
+          "recall": 0.813953488372093,
+          "f1-score": 0.6306306306306306,
+          "support": 172.0
+        },
+        "accuracy": 0.8534405719392315,
+        "macro avg": {
+          "precision": 0.738462740468088,
+          "recall": 0.8372829743866801,
+          "f1-score": 0.7696074000421826,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8934328611465856,
+          "recall": 0.8534405719392315,
+          "f1-score": 0.8658603011091646,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8534393017296604,
+      "accuracy_std": 0.011133160580808838,
+      "balanced_accuracy_mean": 0.8375304273756286,
+      "balanced_accuracy_std": 0.034968476634951964,
+      "precision_macro_mean": 0.7384198151572428,
+      "precision_macro_std": 0.01639394544982638,
+      "recall_macro_mean": 0.8375304273756286,
+      "recall_macro_std": 0.034968476634951964,
+      "f1_macro_mean": 0.7692767443994419,
+      "f1_macro_std": 0.020725170183528173,
+      "stability": 1.0,
+      "icn": 0.6105019418229192,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R3",
+      "experiment_name": "random_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "uniform",
+          "low": 0.5,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=2, clf__learning_rate=0.8982714934301164, clf__n_estimators=39 (2/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=0.9692763545078751, clf__n_estimators=26": 1,
+        "clf__estimator__max_depth=2, clf__learning_rate=0.8982714934301164, clf__n_estimators=39": 2,
+        "clf__estimator__max_depth=2, clf__learning_rate=0.7229163764267956, clf__n_estimators=111": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.6831809216468459, clf__n_estimators=86": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          892,
+          55
+        ],
+        [
+          59,
+          113
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9379600420609885,
+          "recall": 0.941921858500528,
+          "f1-score": 0.9399367755532139,
+          "support": 947.0
+        },
+        "3": {
+          "precision": 0.6726190476190477,
+          "recall": 0.6569767441860465,
+          "f1-score": 0.6647058823529411,
+          "support": 172.0
+        },
+        "accuracy": 0.8981233243967829,
+        "macro avg": {
+          "precision": 0.8052895448400181,
+          "recall": 0.7994493013432873,
+          "f1-score": 0.8023213289530775,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8971748311190637,
+          "recall": 0.8981233243967829,
+          "f1-score": 0.8976314014420013,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8981382126841767,
+      "accuracy_std": 0.026046178016954337,
+      "balanced_accuracy_mean": 0.7996078431372549,
+      "balanced_accuracy_std": 0.0430267532677011,
+      "precision_macro_mean": 0.8086265715744331,
+      "precision_macro_std": 0.05202406133539916,
+      "recall_macro_mean": 0.7996078431372549,
+      "recall_macro_std": 0.0430267532677011,
+      "f1_macro_mean": 0.8030000743977688,
+      "f1_macro_std": 0.04433999503258058,
+      "stability": 0.48527784072974833,
+      "icn": 0.7240205038131661,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R3",
+      "experiment_name": "random_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__final_C": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 10.0
+        },
+        "clf__tree_max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        },
+        "clf__n_neighbors": {
+          "dist": "randint",
+          "low": 3,
+          "high": 12
+        }
+      },
+      "best_params_mode": "clf__final_C=0.014936568554617643, clf__n_neighbors=10, clf__tree_max_depth=2 (3/5)",
+      "best_params_counts": {
+        "clf__final_C=0.6847920095574779, clf__n_neighbors=5, clf__tree_max_depth=None": 1,
+        "clf__final_C=0.014936568554617643, clf__n_neighbors=10, clf__tree_max_depth=2": 3,
+        "clf__final_C=0.011527987128232402, clf__n_neighbors=4, clf__tree_max_depth=None": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          839,
+          108
+        ],
+        [
+          41,
+          131
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9534090909090909,
+          "recall": 0.8859556494192186,
+          "f1-score": 0.9184455391351943,
+          "support": 947.0
+        },
+        "3": {
+          "precision": 0.5481171548117155,
+          "recall": 0.7616279069767442,
+          "f1-score": 0.6374695863746959,
+          "support": 172.0
+        },
+        "accuracy": 0.8668453976764968,
+        "macro avg": {
+          "precision": 0.7507631228604033,
+          "recall": 0.8237917781979813,
+          "f1-score": 0.7779575627549451,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.891112207076429,
+          "recall": 0.8668453976764968,
+          "f1-score": 0.8752570995687907,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8668681934657272,
+      "accuracy_std": 0.030569832955876758,
+      "balanced_accuracy_mean": 0.8238283617540585,
+      "balanced_accuracy_std": 0.016360653731685288,
+      "precision_macro_mean": 0.7591906238697586,
+      "precision_macro_std": 0.03517420950257512,
+      "recall_macro_mean": 0.8238283617540585,
+      "recall_macro_std": 0.016360653731685288,
+      "f1_macro_mean": 0.7794139415546517,
+      "f1_macro_std": 0.02595587067048436,
+      "stability": 0.8859886759121958,
+      "icn": 0.6348744973436804,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R3",
+      "experiment_name": "random_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 947,
+        "3": 172
+      },
+      "n_min": 172,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 50,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 0.5
+        },
+        "clf__max_depth": {
+          "dist": "randint",
+          "low": 2,
+          "high": 5
+        },
+        "clf__subsample": {
+          "dist": "uniform",
+          "low": 0.7,
+          "high": 1.0
+        }
+      },
+      "best_params_mode": "clf__learning_rate=0.012002827428180858, clf__max_depth=4, clf__n_estimators=111, clf__subsample=0.7271819303598462 (2/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.012002827428180858, clf__max_depth=4, clf__n_estimators=111, clf__subsample=0.7271819303598462": 2,
+        "clf__learning_rate=0.0451659424678903, clf__max_depth=3, clf__n_estimators=102, clf__subsample=0.7692681476866446": 1,
+        "clf__learning_rate=0.0602906674791436, clf__max_depth=2, clf__n_estimators=149, clf__subsample=0.7428600453765822": 1,
+        "clf__learning_rate=0.1119650718398326, clf__max_depth=3, clf__n_estimators=71, clf__subsample=0.7021198915659151": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          923,
+          24
+        ],
+        [
+          81,
+          91
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.9193227091633466,
+          "recall": 0.9746568109820486,
+          "f1-score": 0.946181445412609,
+          "support": 947.0
+        },
+        "3": {
+          "precision": 0.7913043478260869,
+          "recall": 0.5290697674418605,
+          "f1-score": 0.6341463414634146,
+          "support": 172.0
+        },
+        "accuracy": 0.9061662198391421,
+        "macro avg": {
+          "precision": 0.8553135284947168,
+          "recall": 0.7518632892119546,
+          "f1-score": 0.7901638934380117,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8996451773045363,
+          "recall": 0.9061662198391421,
+          "f1-score": 0.89821894507368,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.9061819346572711,
+      "accuracy_std": 0.024185016389832156,
+      "balanced_accuracy_mean": 0.7520269628319164,
+      "balanced_accuracy_std": 0.06781896125913425,
+      "precision_macro_mean": 0.8562709985833369,
+      "precision_macro_std": 0.06484142687088587,
+      "recall_macro_mean": 0.7520269628319164,
+      "recall_macro_std": 0.06781896125913425,
+      "f1_macro_mean": 0.7872407784939442,
+      "f1_macro_std": 0.0666039504598964,
+      "stability": 2.1796564553255848e-11,
+      "icn": 0.3726250927406007,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    }
+  ],
+  "GDS_R4": [
+    {
+      "target": "GDS_R4",
+      "experiment_name": "grid_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 906,
+        "3": 64
+      },
+      "n_min": 64,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50
+        ],
+        "clf__max_samples": [
+          0.7,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          null
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50 (4/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50": 4,
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=25": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          91,
+          58,
+          0
+        ],
+        [
+          242,
+          639,
+          25
+        ],
+        [
+          0,
+          22,
+          42
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.2732732732732733,
+          "recall": 0.610738255033557,
+          "f1-score": 0.3775933609958506,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8887343532684284,
+          "recall": 0.7052980132450332,
+          "f1-score": 0.7864615384615384,
+          "support": 906.0
+        },
+        "3": {
+          "precision": 0.6268656716417911,
+          "recall": 0.65625,
+          "f1-score": 0.6412213740458015,
+          "support": 64.0
+        },
+        "accuracy": 0.6899016979445934,
+        "macro avg": {
+          "precision": 0.5962910993944975,
+          "recall": 0.6574287560928634,
+          "f1-score": 0.6017587578343969,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7918055806648691,
+          "recall": 0.6899016979445934,
+          "f1-score": 0.7237120040871018,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6898782831518259,
+      "accuracy_std": 0.017725140824158107,
+      "balanced_accuracy_mean": 0.6570776758221987,
+      "balanced_accuracy_std": 0.0575840678101077,
+      "precision_macro_mean": 0.5979712214472489,
+      "precision_macro_std": 0.02797549815287503,
+      "recall_macro_mean": 0.6570776758221987,
+      "recall_macro_std": 0.0575840678101077,
+      "f1_macro_mean": 0.6004457971017352,
+      "f1_macro_std": 0.0322177039014407,
+      "stability": 0.5051100863909207,
+      "icn": 0.7997409645928948,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R4",
+      "experiment_name": "grid_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 906,
+        "3": 64
+      },
+      "n_min": 64,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.5,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          3
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=3, clf__learning_rate=1.0, clf__n_estimators=25 (2/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=1.0, clf__n_estimators=25": 2,
+        "clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=25": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25": 2
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          106,
+          42,
+          1
+        ],
+        [
+          307,
+          515,
+          84
+        ],
+        [
+          0,
+          11,
+          53
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.2566585956416465,
+          "recall": 0.7114093959731543,
+          "f1-score": 0.37722419928825623,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.9066901408450704,
+          "recall": 0.5684326710816777,
+          "f1-score": 0.6987788331071914,
+          "support": 906.0
+        },
+        "3": {
+          "precision": 0.38405797101449274,
+          "recall": 0.828125,
+          "f1-score": 0.5247524752475248,
+          "support": 64.0
+        },
+        "accuracy": 0.6023235031277927,
+        "macro avg": {
+          "precision": 0.5158022358337365,
+          "recall": 0.7026556890182775,
+          "f1-score": 0.5335851692143242,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7902440647910337,
+          "recall": 0.6023235031277927,
+          "f1-score": 0.6460091035790054,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6023542600896861,
+      "accuracy_std": 0.04565230876077921,
+      "balanced_accuracy_mean": 0.7030545454207104,
+      "balanced_accuracy_std": 0.028799056910983233,
+      "precision_macro_mean": 0.5203518318280773,
+      "precision_macro_std": 0.027143242221867547,
+      "recall_macro_mean": 0.7030545454207104,
+      "recall_macro_std": 0.028799056910983233,
+      "f1_macro_mean": 0.5354260207384425,
+      "f1_macro_std": 0.04010608720646562,
+      "stability": 6.403222396755837e-11,
+      "icn": 0.5746492170071177,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R4",
+      "experiment_name": "grid_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 906,
+        "3": 64
+      },
+      "n_min": 64,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__final_C": [
+          0.1,
+          1.0
+        ],
+        "clf__tree_max_depth": [
+          2,
+          null
+        ],
+        "clf__n_neighbors": [
+          3,
+          7
+        ]
+      },
+      "best_params_mode": "clf__final_C=0.1, clf__n_neighbors=7, clf__tree_max_depth=2 (2/5)",
+      "best_params_counts": {
+        "clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=2": 1,
+        "clf__final_C=0.1, clf__n_neighbors=7, clf__tree_max_depth=2": 2,
+        "clf__final_C=0.1, clf__n_neighbors=3, clf__tree_max_depth=2": 2
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          119,
+          30,
+          0
+        ],
+        [
+          346,
+          476,
+          84
+        ],
+        [
+          0,
+          10,
+          54
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.25591397849462366,
+          "recall": 0.7986577181208053,
+          "f1-score": 0.38762214983713356,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.9224806201550387,
+          "recall": 0.5253863134657837,
+          "f1-score": 0.6694796061884669,
+          "support": 906.0
+        },
+        "3": {
+          "precision": 0.391304347826087,
+          "recall": 0.84375,
+          "f1-score": 0.5346534653465347,
+          "support": 64.0
+        },
+        "accuracy": 0.579982126899017,
+        "macro avg": {
+          "precision": 0.5232329821585832,
+          "recall": 0.7225980105288631,
+          "f1-score": 0.5305850737907117,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.8033441491662499,
+          "recall": 0.579982126899017,
+          "f1-score": 0.6242377527387509,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5800248238308777,
+      "accuracy_std": 0.05186658958853912,
+      "balanced_accuracy_mean": 0.7222756006086164,
+      "balanced_accuracy_std": 0.03866700844019626,
+      "precision_macro_mean": 0.5250442999445549,
+      "precision_macro_std": 0.02092870665723601,
+      "recall_macro_mean": 0.7222756006086164,
+      "recall_macro_std": 0.03866700844019626,
+      "f1_macro_mean": 0.5304113862163737,
+      "f1_macro_std": 0.038533177894775845,
+      "stability": 0.10071675373723354,
+      "icn": 0.6051312467538973,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R4",
+      "experiment_name": "grid_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 906,
+        "3": 64
+      },
+      "n_min": 64,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.05,
+          0.1
+        ],
+        "clf__max_depth": [
+          2,
+          3
+        ],
+        "clf__subsample": [
+          0.8,
+          1.0
+        ]
+      },
+      "best_params_mode": "clf__learning_rate=0.05, clf__max_depth=3, clf__n_estimators=100, clf__subsample=1.0 (2/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.05, clf__max_depth=2, clf__n_estimators=100, clf__subsample=1.0": 1,
+        "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=1.0": 1,
+        "clf__learning_rate=0.05, clf__max_depth=3, clf__n_estimators=100, clf__subsample=1.0": 2,
+        "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=0.8": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          149,
+          0
+        ],
+        [
+          1,
+          894,
+          11
+        ],
+        [
+          0,
+          26,
+          38
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8362956033676333,
+          "recall": 0.9867549668874173,
+          "f1-score": 0.9053164556962026,
+          "support": 906.0
+        },
+        "3": {
+          "precision": 0.7755102040816326,
+          "recall": 0.59375,
+          "f1-score": 0.672566371681416,
+          "support": 64.0
+        },
+        "accuracy": 0.8328865058087578,
+        "macro avg": {
+          "precision": 0.5372686024830887,
+          "recall": 0.5268349889624724,
+          "f1-score": 0.5259609424592062,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7214624394211798,
+          "recall": 0.8328865058087578,
+          "f1-score": 0.7714575126437624,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8328835682254965,
+      "accuracy_std": 0.00983858946439958,
+      "balanced_accuracy_mean": 0.5272080896390288,
+      "balanced_accuracy_std": 0.040531567730696307,
+      "precision_macro_mean": 0.5417441371381425,
+      "precision_macro_std": 0.04660574841148868,
+      "recall_macro_mean": 0.5272080896390288,
+      "recall_macro_std": 0.040531567730696307,
+      "f1_macro_mean": 0.5250055311545312,
+      "f1_macro_std": 0.03271084186072126,
+      "stability": 0.47353340615726625,
+      "icn": 0.2127750957827711,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R4",
+      "experiment_name": "random_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 906,
+        "3": 64
+      },
+      "n_min": 64,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__max_samples": {
+          "dist": "uniform",
+          "low": 0.6,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663, clf__n_estimators=115 (3/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663, clf__n_estimators=115": 3,
+        "clf__estimator__max_depth=None, clf__max_samples=0.6571467271687763, clf__n_estimators=27": 1,
+        "clf__estimator__max_depth=None, clf__max_samples=0.7465447373174767, clf__n_estimators=86": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          89,
+          60,
+          0
+        ],
+        [
+          235,
+          648,
+          23
+        ],
+        [
+          0,
+          21,
+          43
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.27469135802469136,
+          "recall": 0.5973154362416108,
+          "f1-score": 0.3763213530655391,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8888888888888888,
+          "recall": 0.7152317880794702,
+          "f1-score": 0.7926605504587156,
+          "support": 906.0
+        },
+        "3": {
+          "precision": 0.6515151515151515,
+          "recall": 0.671875,
+          "f1-score": 0.6615384615384615,
+          "support": 64.0
+        },
+        "accuracy": 0.6970509383378016,
+        "macro avg": {
+          "precision": 0.6050317994762439,
+          "recall": 0.6614740747736937,
+          "f1-score": 0.6101734550209055,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7935293256264361,
+          "recall": 0.6970509383378016,
+          "f1-score": 0.7297236835217367,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.697017136450993,
+      "accuracy_std": 0.02645651097777736,
+      "balanced_accuracy_mean": 0.6610743298741013,
+      "balanced_accuracy_std": 0.06343476016920195,
+      "precision_macro_mean": 0.6100057921572375,
+      "precision_macro_std": 0.025076817290075708,
+      "recall_macro_mean": 0.6610743298741013,
+      "recall_macro_std": 0.06343476016920195,
+      "f1_macro_mean": 0.6090103223500813,
+      "f1_macro_std": 0.03110107942197798,
+      "stability": 0.5766099445249506,
+      "icn": 0.8519031105881276,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R4",
+      "experiment_name": "random_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 906,
+        "3": 64
+      },
+      "n_min": 64,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "uniform",
+          "low": 0.5,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=3, clf__learning_rate=0.9692763545078751, clf__n_estimators=26 (2/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=0.9692763545078751, clf__n_estimators=26": 2,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5115312125207079, clf__n_estimators=115": 2,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5714334089609704, clf__n_estimators=27": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          79,
+          69,
+          1
+        ],
+        [
+          278,
+          535,
+          93
+        ],
+        [
+          0,
+          10,
+          54
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.22128851540616246,
+          "recall": 0.5302013422818792,
+          "f1-score": 0.31225296442687744,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8713355048859935,
+          "recall": 0.5905077262693157,
+          "f1-score": 0.7039473684210527,
+          "support": 906.0
+        },
+        "3": {
+          "precision": 0.36486486486486486,
+          "recall": 0.84375,
+          "f1-score": 0.5094339622641509,
+          "support": 64.0
+        },
+        "accuracy": 0.5969615728328865,
+        "macro avg": {
+          "precision": 0.4858296283856736,
+          "recall": 0.6548196895170649,
+          "f1-score": 0.5085447650373603,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7558117136493117,
+          "recall": 0.5969615728328865,
+          "f1-score": 0.6406664710223272,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5969971172325432,
+      "accuracy_std": 0.07674878874908642,
+      "balanced_accuracy_mean": 0.6554121664199773,
+      "balanced_accuracy_std": 0.04609920586463368,
+      "precision_macro_mean": 0.482106139448636,
+      "precision_macro_std": 0.032562901527772345,
+      "recall_macro_mean": 0.6554121664199773,
+      "recall_macro_std": 0.04609920586463368,
+      "f1_macro_mean": 0.4981030996025672,
+      "f1_macro_std": 0.033945717628342344,
+      "stability": 0.39446166465242105,
+      "icn": 0.3310527441848651,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R4",
+      "experiment_name": "random_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 906,
+        "3": 64
+      },
+      "n_min": 64,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__final_C": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 10.0
+        },
+        "clf__tree_max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        },
+        "clf__n_neighbors": {
+          "dist": "randint",
+          "low": 3,
+          "high": 12
+        }
+      },
+      "best_params_mode": "clf__final_C=3.800329214045199, clf__n_neighbors=9, clf__tree_max_depth=2 (1/5)",
+      "best_params_counts": {
+        "clf__final_C=3.800329214045199, clf__n_neighbors=9, clf__tree_max_depth=2": 1,
+        "clf__final_C=0.035113563139704075, clf__n_neighbors=7, clf__tree_max_depth=2": 1,
+        "clf__final_C=0.011527987128232402, clf__n_neighbors=4, clf__tree_max_depth=None": 1,
+        "clf__final_C=0.6358358856676253, clf__n_neighbors=10, clf__tree_max_depth=4": 1,
+        "clf__final_C=0.13292918943162169, clf__n_neighbors=10, clf__tree_max_depth=2": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          120,
+          29,
+          0
+        ],
+        [
+          353,
+          463,
+          90
+        ],
+        [
+          0,
+          11,
+          53
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.2536997885835095,
+          "recall": 0.8053691275167785,
+          "f1-score": 0.3858520900321543,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.9204771371769384,
+          "recall": 0.5110375275938189,
+          "f1-score": 0.6572036905606813,
+          "support": 906.0
+        },
+        "3": {
+          "precision": 0.3706293706293706,
+          "recall": 0.828125,
+          "f1-score": 0.5120772946859904,
+          "support": 64.0
+        },
+        "accuracy": 0.5683646112600537,
+        "macro avg": {
+          "precision": 0.5149354321299395,
+          "recall": 0.7148438850368658,
+          "f1-score": 0.5183776917596087,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.800244713584923,
+          "recall": 0.5683646112600536,
+          "f1-score": 0.6127716281703948,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5684136771300448,
+      "accuracy_std": 0.03852119425296663,
+      "balanced_accuracy_mean": 0.714579380315711,
+      "balanced_accuracy_std": 0.02894822128753071,
+      "precision_macro_mean": 0.5166095195497088,
+      "precision_macro_std": 0.01583446407478416,
+      "recall_macro_mean": 0.714579380315711,
+      "recall_macro_std": 0.02894822128753071,
+      "f1_macro_mean": 0.5182060916876013,
+      "f1_macro_std": 0.024488930633958097,
+      "stability": 1.0,
+      "icn": 0.5835192785435587,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R4",
+      "experiment_name": "random_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 906,
+        "3": 64
+      },
+      "n_min": 64,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 50,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 0.5
+        },
+        "clf__max_depth": {
+          "dist": "randint",
+          "low": 2,
+          "high": 5
+        },
+        "clf__subsample": {
+          "dist": "uniform",
+          "low": 0.7,
+          "high": 1.0
+        }
+      },
+      "best_params_mode": "clf__learning_rate=0.11236195345220405, clf__max_depth=4, clf__n_estimators=113, clf__subsample=0.8400288679743939 (2/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.11236195345220405, clf__max_depth=4, clf__n_estimators=113, clf__subsample=0.8400288679743939": 2,
+        "clf__learning_rate=0.043284502212938815, clf__max_depth=2, clf__n_estimators=64, clf__subsample=0.9195981825434215": 1,
+        "clf__learning_rate=0.10401663679887314, clf__max_depth=4, clf__n_estimators=132, clf__subsample=0.7299924747454009": 1,
+        "clf__learning_rate=0.1119650718398326, clf__max_depth=3, clf__n_estimators=71, clf__subsample=0.7021198915659151": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          146,
+          0
+        ],
+        [
+          16,
+          873,
+          17
+        ],
+        [
+          0,
+          30,
+          34
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.15789473684210525,
+          "recall": 0.020134228187919462,
+          "f1-score": 0.03571428571428571,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8322211630123928,
+          "recall": 0.9635761589403974,
+          "f1-score": 0.8930946291560102,
+          "support": 906.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "recall": 0.53125,
+          "f1-score": 0.591304347826087,
+          "support": 64.0
+        },
+        "accuracy": 0.8132260947274352,
+        "macro avg": {
+          "precision": 0.552260855507055,
+          "recall": 0.5049867957094389,
+          "f1-score": 0.5067044208987943,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7329627847590421,
+          "recall": 0.8132260947274352,
+          "f1-score": 0.7616699203285463,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.8132407110826392,
+      "accuracy_std": 0.015388542870644546,
+      "balanced_accuracy_mean": 0.5052966446774791,
+      "balanced_accuracy_std": 0.034955868506143815,
+      "precision_macro_mean": 0.5439552737279201,
+      "precision_macro_std": 0.04369898572528624,
+      "recall_macro_mean": 0.5052966446774791,
+      "recall_macro_std": 0.034955868506143815,
+      "f1_macro_mean": 0.5052436173939425,
+      "f1_macro_std": 0.024515313362070523,
+      "stability": 0.9983106573857894,
+      "icn": 0.12402620046615816,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    }
+  ],
+  "GDS_R5": [
+    {
+      "target": "GDS_R5",
+      "experiment_name": "grid_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 798,
+        "3": 172
+      },
+      "n_min": 149,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50
+        ],
+        "clf__max_samples": [
+          0.7,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          null
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=25 (4/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50": 1,
+        "clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=25": 4
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          90,
+          56,
+          3
+        ],
+        [
+          236,
+          452,
+          110
+        ],
+        [
+          3,
+          52,
+          117
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.2735562310030395,
+          "recall": 0.6040268456375839,
+          "f1-score": 0.37656903765690375,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8071428571428572,
+          "recall": 0.5664160401002506,
+          "f1-score": 0.6656848306332842,
+          "support": 798.0
+        },
+        "3": {
+          "precision": 0.508695652173913,
+          "recall": 0.6802325581395349,
+          "f1-score": 0.582089552238806,
+          "support": 172.0
+        },
+        "accuracy": 0.5889186773905273,
+        "macro avg": {
+          "precision": 0.5297982467732699,
+          "recall": 0.6168918146257898,
+          "f1-score": 0.541447806842998,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.6902194196544825,
+          "recall": 0.5889186773905273,
+          "f1-score": 0.6143384132630152,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5889133568225496,
+      "accuracy_std": 0.030846665220931768,
+      "balanced_accuracy_mean": 0.6170423021735262,
+      "balanced_accuracy_std": 0.039137980020209816,
+      "precision_macro_mean": 0.5322540073396955,
+      "precision_macro_std": 0.04002427442486495,
+      "recall_macro_mean": 0.6170423021735262,
+      "recall_macro_std": 0.039137980020209816,
+      "f1_macro_mean": 0.5421324860643525,
+      "f1_macro_std": 0.03812135784592427,
+      "stability": 0.30439997850590783,
+      "icn": 0.6936068814737547,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R5",
+      "experiment_name": "grid_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 798,
+        "3": 172
+      },
+      "n_min": 149,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          25,
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.5,
+          1.0
+        ],
+        "clf__estimator__max_depth": [
+          2,
+          3
+        ]
+      },
+      "best_params_mode": "clf__estimator__max_depth=2, clf__learning_rate=1.0, clf__n_estimators=25 (2/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=2, clf__learning_rate=1.0, clf__n_estimators=25": 2,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=1.0, clf__n_estimators=25": 2
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          94,
+          51,
+          4
+        ],
+        [
+          267,
+          389,
+          142
+        ],
+        [
+          5,
+          36,
+          131
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.2568306010928962,
+          "recall": 0.6308724832214765,
+          "f1-score": 0.3650485436893204,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8172268907563025,
+          "recall": 0.487468671679198,
+          "f1-score": 0.6106750392464678,
+          "support": 798.0
+        },
+        "3": {
+          "precision": 0.4729241877256318,
+          "recall": 0.7616279069767442,
+          "f1-score": 0.5835189309576837,
+          "support": 172.0
+        },
+        "accuracy": 0.548704200178731,
+        "macro avg": {
+          "precision": 0.5156605598582769,
+          "recall": 0.6266563539591395,
+          "f1-score": 0.5197475046311574,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.6896852356346556,
+          "recall": 0.548704200178731,
+          "f1-score": 0.5737946116649791,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5486747277386291,
+      "accuracy_std": 0.05508320351607374,
+      "balanced_accuracy_mean": 0.6264508479600905,
+      "balanced_accuracy_std": 0.043307964090116696,
+      "precision_macro_mean": 0.5266814067486909,
+      "precision_macro_std": 0.05172255577881393,
+      "recall_macro_mean": 0.6264508479600905,
+      "recall_macro_std": 0.043307964090116696,
+      "f1_macro_mean": 0.5198632838782447,
+      "f1_macro_std": 0.04819868325537371,
+      "stability": 0.003997208701318589,
+      "icn": 0.5334463541336799,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R5",
+      "experiment_name": "grid_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 798,
+        "3": 172
+      },
+      "n_min": 149,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__final_C": [
+          0.1,
+          1.0
+        ],
+        "clf__tree_max_depth": [
+          2,
+          null
+        ],
+        "clf__n_neighbors": [
+          3,
+          7
+        ]
+      },
+      "best_params_mode": "clf__final_C=0.1, clf__n_neighbors=3, clf__tree_max_depth=2 (3/5)",
+      "best_params_counts": {
+        "clf__final_C=0.1, clf__n_neighbors=3, clf__tree_max_depth=2": 3,
+        "clf__final_C=0.1, clf__n_neighbors=7, clf__tree_max_depth=None": 1,
+        "clf__final_C=0.1, clf__n_neighbors=7, clf__tree_max_depth=2": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          112,
+          34,
+          3
+        ],
+        [
+          339,
+          365,
+          94
+        ],
+        [
+          5,
+          36,
+          131
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.24561403508771928,
+          "recall": 0.7516778523489933,
+          "f1-score": 0.3702479338842975,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8390804597701149,
+          "recall": 0.4573934837092732,
+          "f1-score": 0.592051905920519,
+          "support": 798.0
+        },
+        "3": {
+          "precision": 0.5745614035087719,
+          "recall": 0.7616279069767442,
+          "f1-score": 0.655,
+          "support": 172.0
+        },
+        "accuracy": 0.5433422698838248,
+        "macro avg": {
+          "precision": 0.5530852994555353,
+          "recall": 0.6568997476783369,
+          "f1-score": 0.5390999466016055,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7193988020805456,
+          "recall": 0.5433422698838248,
+          "f1-score": 0.5721933539529351,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5433776425368353,
+      "accuracy_std": 0.03538249870998566,
+      "balanced_accuracy_mean": 0.6569905838067173,
+      "balanced_accuracy_std": 0.023865470473927033,
+      "precision_macro_mean": 0.553570713077651,
+      "precision_macro_std": 0.024673224426609408,
+      "recall_macro_mean": 0.6569905838067173,
+      "recall_macro_std": 0.023865470473927033,
+      "f1_macro_mean": 0.5390596574323716,
+      "f1_macro_std": 0.02611719330664881,
+      "stability": 0.6622413828736756,
+      "icn": 0.8660975539342808,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R5",
+      "experiment_name": "grid_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 798,
+        "3": 172
+      },
+      "n_min": 149,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "grid",
+      "search_scoring": "f1_macro",
+      "search_n_iter": null,
+      "search_params": {
+        "clf__n_estimators": [
+          50,
+          100
+        ],
+        "clf__learning_rate": [
+          0.05,
+          0.1
+        ],
+        "clf__max_depth": [
+          2,
+          3
+        ],
+        "clf__subsample": [
+          0.8,
+          1.0
+        ]
+      },
+      "best_params_mode": "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=100, clf__subsample=0.8 (2/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=100, clf__subsample=0.8": 2,
+        "clf__learning_rate=0.05, clf__max_depth=2, clf__n_estimators=100, clf__subsample=0.8": 1,
+        "clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=1.0": 1,
+        "clf__learning_rate=0.05, clf__max_depth=3, clf__n_estimators=50, clf__subsample=0.8": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          149,
+          0
+        ],
+        [
+          1,
+          769,
+          28
+        ],
+        [
+          0,
+          75,
+          97
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.7744209466263847,
+          "recall": 0.9636591478696742,
+          "f1-score": 0.8587381351200447,
+          "support": 798.0
+        },
+        "3": {
+          "precision": 0.776,
+          "recall": 0.563953488372093,
+          "f1-score": 0.6531986531986532,
+          "support": 172.0
+        },
+        "accuracy": 0.77390527256479,
+        "macro avg": {
+          "precision": 0.516806982208795,
+          "recall": 0.5092042120805891,
+          "f1-score": 0.5039789294395659,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.6715459476388338,
+          "recall": 0.77390527256479,
+          "f1-score": 0.7128000001572511,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.7739149583600258,
+      "accuracy_std": 0.00896137455745358,
+      "balanced_accuracy_mean": 0.5091763560770219,
+      "balanced_accuracy_std": 0.018484271659360205,
+      "precision_macro_mean": 0.5179893138984979,
+      "precision_macro_std": 0.017126256062639206,
+      "recall_macro_mean": 0.5091763560770219,
+      "recall_macro_std": 0.018484271659360205,
+      "f1_macro_mean": 0.5036672292984092,
+      "f1_macro_std": 0.014786726890371395,
+      "stability": 1.0,
+      "icn": 0.10320054230263966,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R5",
+      "experiment_name": "random_all",
+      "model_key": "bagging",
+      "model_name": "Bagging",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 798,
+        "3": 172
+      },
+      "n_min": 149,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__max_samples": {
+          "dist": "uniform",
+          "low": 0.6,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663, clf__n_estimators=115 (5/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663, clf__n_estimators=115": 5
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          85,
+          61,
+          3
+        ],
+        [
+          233,
+          480,
+          85
+        ],
+        [
+          3,
+          54,
+          115
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.26479750778816197,
+          "recall": 0.5704697986577181,
+          "f1-score": 0.3617021276595745,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8067226890756303,
+          "recall": 0.6015037593984962,
+          "f1-score": 0.6891600861450108,
+          "support": 798.0
+        },
+        "3": {
+          "precision": 0.5665024630541872,
+          "recall": 0.6686046511627907,
+          "f1-score": 0.6133333333333333,
+          "support": 172.0
+        },
+        "accuracy": 0.6076854334226989,
+        "macro avg": {
+          "precision": 0.546007553305993,
+          "recall": 0.6135260697396684,
+          "f1-score": 0.5547318490459728,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.6976389259947356,
+          "recall": 0.6076854334226989,
+          "f1-score": 0.6339023226973445,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.6076753683536195,
+      "accuracy_std": 0.029672063237346048,
+      "balanced_accuracy_mean": 0.6137051150974377,
+      "balanced_accuracy_std": 0.045017683794538965,
+      "precision_macro_mean": 0.550329544816711,
+      "precision_macro_std": 0.04579820079582375,
+      "recall_macro_mean": 0.6137051150974377,
+      "recall_macro_std": 0.045017683794538965,
+      "f1_macro_mean": 0.5556701406173901,
+      "f1_macro_std": 0.039802482738436555,
+      "stability": 0.2542860292605471,
+      "icn": 0.8275508936070518,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R5",
+      "experiment_name": "random_all",
+      "model_key": "adaboost",
+      "model_name": "AdaBoost",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 798,
+        "3": 172
+      },
+      "n_min": 149,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 25,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "uniform",
+          "low": 0.5,
+          "high": 1.0
+        },
+        "clf__estimator__max_depth": {
+          "values": [
+            2,
+            3
+          ]
+        }
+      },
+      "best_params_mode": "clf__estimator__max_depth=3, clf__learning_rate=0.6831809216468459, clf__n_estimators=86 (1/5)",
+      "best_params_counts": {
+        "clf__estimator__max_depth=3, clf__learning_rate=0.6831809216468459, clf__n_estimators=86": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.5714334089609704, clf__n_estimators=27": 1,
+        "clf__estimator__max_depth=2, clf__learning_rate=0.8982714934301164, clf__n_estimators=39": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.9961057796456088, clf__n_estimators=57": 1,
+        "clf__estimator__max_depth=3, clf__learning_rate=0.8058265802441404, clf__n_estimators=149": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          91,
+          53,
+          5
+        ],
+        [
+          280,
+          389,
+          129
+        ],
+        [
+          4,
+          37,
+          131
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.24266666666666667,
+          "recall": 0.610738255033557,
+          "f1-score": 0.3473282442748092,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8121085594989561,
+          "recall": 0.487468671679198,
+          "f1-score": 0.6092404072043853,
+          "support": 798.0
+        },
+        "3": {
+          "precision": 0.49433962264150944,
+          "recall": 0.7616279069767442,
+          "f1-score": 0.5995423340961098,
+          "support": 172.0
+        },
+        "accuracy": 0.5460232350312779,
+        "macro avg": {
+          "precision": 0.516371616269044,
+          "recall": 0.6199449445631664,
+          "f1-score": 0.5187036618584348,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.6874409105521357,
+          "recall": 0.5460232350312779,
+          "f1-score": 0.5728749194017666,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5460041639974376,
+      "accuracy_std": 0.05008978880617805,
+      "balanced_accuracy_mean": 0.6192947901346616,
+      "balanced_accuracy_std": 0.03773004349855806,
+      "precision_macro_mean": 0.5289350852189412,
+      "precision_macro_std": 0.05385768312057904,
+      "recall_macro_mean": 0.6192947901346616,
+      "recall_macro_std": 0.03773004349855806,
+      "f1_macro_mean": 0.5196054664827088,
+      "f1_macro_std": 0.0483327738049997,
+      "stability": 2.980971025579038e-11,
+      "icn": 0.5169245447092038,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R5",
+      "experiment_name": "random_all",
+      "model_key": "stacking",
+      "model_name": "Stacking",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 798,
+        "3": 172
+      },
+      "n_min": 149,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__final_C": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 10.0
+        },
+        "clf__tree_max_depth": {
+          "values": [
+            2,
+            3,
+            4,
+            null
+          ]
+        },
+        "clf__n_neighbors": {
+          "dist": "randint",
+          "low": 3,
+          "high": 12
+        }
+      },
+      "best_params_mode": "clf__final_C=0.08179499475211674, clf__n_neighbors=8, clf__tree_max_depth=2 (2/5)",
+      "best_params_counts": {
+        "clf__final_C=0.08179499475211674, clf__n_neighbors=8, clf__tree_max_depth=2": 2,
+        "clf__final_C=0.6847920095574779, clf__n_neighbors=5, clf__tree_max_depth=None": 1,
+        "clf__final_C=0.035113563139704075, clf__n_neighbors=7, clf__tree_max_depth=2": 2
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          110,
+          37,
+          2
+        ],
+        [
+          349,
+          358,
+          91
+        ],
+        [
+          5,
+          35,
+          132
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.23706896551724138,
+          "recall": 0.738255033557047,
+          "f1-score": 0.35889070146818924,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.8325581395348837,
+          "recall": 0.44862155388471175,
+          "f1-score": 0.5830618892508144,
+          "support": 798.0
+        },
+        "3": {
+          "precision": 0.5866666666666667,
+          "recall": 0.7674418604651163,
+          "f1-score": 0.6649874055415617,
+          "support": 172.0
+        },
+        "accuracy": 0.5361930294906166,
+        "macro avg": {
+          "precision": 0.5520979239062639,
+          "recall": 0.651439482635625,
+          "f1-score": 0.5356466654201885,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.7154703645018523,
+          "recall": 0.5361930294906166,
+          "f1-score": 0.5658051259106869,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.5362267777065983,
+      "accuracy_std": 0.03425066139289985,
+      "balanced_accuracy_mean": 0.6515745337388913,
+      "balanced_accuracy_std": 0.03029974037805405,
+      "precision_macro_mean": 0.5527545762848908,
+      "precision_macro_std": 0.02946864301560503,
+      "recall_macro_mean": 0.6515745337388913,
+      "recall_macro_std": 0.03029974037805405,
+      "f1_macro_mean": 0.5356870150238063,
+      "f1_macro_std": 0.02887580168671569,
+      "stability": 0.5800078968535476,
+      "icn": 0.8201607749453979,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    },
+    {
+      "target": "GDS_R5",
+      "experiment_name": "random_all",
+      "model_key": "gradient_boosting",
+      "model_name": "Gradient Boosting",
+      "implemented": true,
+      "status": "Implementado",
+      "message": "",
+      "class_distribution": {
+        "1": 149,
+        "2": 798,
+        "3": 172
+      },
+      "n_min": 149,
+      "k_outer": 5,
+      "k_inner_requested": 3,
+      "search_type": "random",
+      "search_scoring": "f1_macro",
+      "search_n_iter": 12,
+      "search_params": {
+        "clf__n_estimators": {
+          "dist": "randint",
+          "low": 50,
+          "high": 151
+        },
+        "clf__learning_rate": {
+          "dist": "loguniform",
+          "low": 0.01,
+          "high": 0.5
+        },
+        "clf__max_depth": {
+          "dist": "randint",
+          "low": 2,
+          "high": 5
+        },
+        "clf__subsample": {
+          "dist": "uniform",
+          "low": 0.7,
+          "high": 1.0
+        }
+      },
+      "best_params_mode": "clf__learning_rate=0.3931632352373656, clf__max_depth=3, clf__n_estimators=113, clf__subsample=0.9976634677873653 (1/5)",
+      "best_params_counts": {
+        "clf__learning_rate=0.3931632352373656, clf__max_depth=3, clf__n_estimators=113, clf__subsample=0.9976634677873653": 1,
+        "clf__learning_rate=0.043284502212938815, clf__max_depth=2, clf__n_estimators=64, clf__subsample=0.9195981825434215": 1,
+        "clf__learning_rate=0.10401663679887314, clf__max_depth=4, clf__n_estimators=132, clf__subsample=0.7299924747454009": 1,
+        "clf__learning_rate=0.0451659424678903, clf__max_depth=3, clf__n_estimators=102, clf__subsample=0.7692681476866446": 1,
+        "clf__learning_rate=0.28907661229971016, clf__max_depth=4, clf__n_estimators=70, clf__subsample=0.8351497755908629": 1
+      },
+      "warnings": [],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          148,
+          0
+        ],
+        [
+          13,
+          752,
+          33
+        ],
+        [
+          0,
+          76,
+          96
+        ]
+      ],
+      "classification_report": {
+        "1": {
+          "precision": 0.07142857142857142,
+          "recall": 0.006711409395973154,
+          "f1-score": 0.012269938650306749,
+          "support": 149.0
+        },
+        "2": {
+          "precision": 0.7704918032786885,
+          "recall": 0.9423558897243107,
+          "f1-score": 0.8478015783540023,
+          "support": 798.0
+        },
+        "3": {
+          "precision": 0.7441860465116279,
+          "recall": 0.5581395348837209,
+          "f1-score": 0.6378737541528239,
+          "support": 172.0
+        },
+        "accuracy": 0.7587131367292225,
+        "macro avg": {
+          "precision": 0.5287021404062959,
+          "recall": 0.502402278001335,
+          "f1-score": 0.4993150903857109,
+          "support": 1119.0
+        },
+        "weighted avg": {
+          "precision": 0.6733648937973642,
+          "recall": 0.7587131367292225,
+          "f1-score": 0.7042789688111486,
+          "support": 1119.0
+        }
+      },
+      "accuracy_mean": 0.7587083600256246,
+      "accuracy_std": 0.01820831283646241,
+      "balanced_accuracy_mean": 0.5024661470530525,
+      "balanced_accuracy_std": 0.02287377784657975,
+      "precision_macro_mean": 0.5274284882965304,
+      "precision_macro_std": 0.0489756416198137,
+      "recall_macro_mean": 0.5024661470530525,
+      "recall_macro_std": 0.02287377784657975,
+      "f1_macro_mean": 0.498889208245665,
+      "f1_macro_std": 0.015278125604069031,
+      "stability": 0.985351516530888,
+      "icn": 0.07579597160502632,
+      "icn_note": "ICN normalizado min-max entre corridas implementadas."
+    }
+  ]
+}

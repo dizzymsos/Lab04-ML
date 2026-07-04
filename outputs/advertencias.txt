@@ -1,0 +1,8 @@
+[grid_all | GDS | Bagging] GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo.
+[grid_all | GDS | AdaBoost] GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo.
+[grid_all | GDS | Stacking] GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo.
+[grid_all | GDS | Gradient Boosting] GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo.
+[random_all | GDS | Bagging] GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo.
+[random_all | GDS | AdaBoost] GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo.
+[random_all | GDS | Stacking] GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo.
+[random_all | GDS | Gradient Boosting] GDS: ciclo interno usa KFold no estratificado porque una clase tiene solo 1 ejemplo dentro de un entrenamiento externo.

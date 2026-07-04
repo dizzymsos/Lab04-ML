@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=1.5cm, landscape}
+\begin{document}
+\section*{Laboratorio 04: resultados de clasificadores de ensamble}
+Se implementan Bagging, AdaBoost, Stacking y Gradient Boosting usando el mismo protocolo de validaci\'on cruzada anidada del Laboratorio 03.
+
+\subsection*{Experimento GDS}
+\noindent\textbf{Distribuci\'on de clases:} 1: 149, 2: 500, 3: 298, 4: 108, 5: 42, 6: 20, 7: 2. \textbf{n\_min:} 2. \textbf{k externo:} 2.
+\begin{table}[h]
+\centering
+\caption{Resultados para GDS}
+\scriptsize
+\begin{tabular}{p{3.2cm}p{2.0cm}p{1.6cm}p{1.6cm}p{1.8cm}p{1.5cm}p{1.4cm}p{3.4cm}}
+\toprule
+Experimento / modelo & F1 macro & Balanced Acc. & Recall macro & Precisi\'on macro & Estab. & ICN & Hiperpar\'ametros / estado \\
+\midrule
+grid\_all / Bagging & 0.346 +/- 0.002 & 0.378 & 0.378 & 0.341 & 1.000 & 0.544 & clf\_\_estimator\_\_max\_depth=None, clf\_\_max\_samples=0.7, clf\_\_n\_estimators=50 (2/2) \\
+grid\_all / AdaBoost & 0.301 +/- 0.023 & 0.432 & 0.432 & 0.300 & 0.634 & 0.402 & clf\_\_estimator\_\_max\_depth=2, clf\_\_learning\_rate=0.5, clf\_\_n\_estimators=50 (1/2) \\
+grid\_all / Stacking & 0.364 +/- 0.059 & 0.473 & 0.473 & 0.365 & 0.000 & 0.936 & clf\_\_final\_C=1.0, clf\_\_n\_neighbors=7, clf\_\_tree\_max\_depth=2 (2/2) \\
+grid\_all / Gradient Boosting & 0.341 +/- 0.010 & 0.349 & 0.349 & 0.363 & 0.862 & 0.445 & clf\_\_learning\_rate=0.1, clf\_\_max\_depth=2, clf\_\_n\_estimators=50, clf\_\_subsample=1.0 (1/2) \\
+random\_all / Bagging & 0.312 +/- 0.018 & 0.394 & 0.394 & 0.318 & 0.723 & 0.365 & clf\_\_estimator\_\_max\_depth=None, clf\_\_max\_samples=0.6092249700165663, clf\_\_n\_estimators=115 (1/2) \\
+random\_all / AdaBoost & 0.292 +/- 0.024 & 0.366 & 0.366 & 0.306 & 0.621 & 0.140 & clf\_\_estimator\_\_max\_depth=3, clf\_\_learning\_rate=0.5714334089609704, clf\_\_n\_estimators=27 (1/2) \\
+random\_all / Stacking & 0.330 +/- 0.022 & 0.446 & 0.446 & 0.341 & 0.657 & 0.659 & clf\_\_final\_C=0.6847920095574779, clf\_\_n\_neighbors=5, clf\_\_tree\_max\_depth=None (2/2) \\
+random\_all / Gradient Boosting & 0.328 +/- 0.016 & 0.335 & 0.335 & 0.376 & 0.751 & 0.336 & clf\_\_learning\_rate=0.010944158354662342, clf\_\_max\_depth=4, clf\_\_n\_estimators=108, clf\_\_subsample=0.8199582915145767 (1/2) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Experimento GDS\_R1}
+\noindent\textbf{Distribuci\'on de clases:} 1: 947, 2: 150, 3: 22. \textbf{n\_min:} 22. \textbf{k externo:} 5.
+\begin{table}[h]
+\centering
+\caption{Resultados para GDS\_R1}
+\scriptsize
+\begin{tabular}{p{3.2cm}p{2.0cm}p{1.6cm}p{1.6cm}p{1.8cm}p{1.5cm}p{1.4cm}p{3.4cm}}
+\toprule
+Experimento / modelo & F1 macro & Balanced Acc. & Recall macro & Precisi\'on macro & Estab. & ICN & Hiperpar\'ametros / estado \\
+\midrule
+grid\_all / Bagging & 0.687 +/- 0.033 & 0.743 & 0.743 & 0.659 & 1.000 & 0.497 & clf\_\_estimator\_\_max\_depth=None, clf\_\_max\_samples=0.7, clf\_\_n\_estimators=50 (3/5) \\
+grid\_all / AdaBoost & 0.676 +/- 0.086 & 0.713 & 0.713 & 0.669 & 0.000 & 0.211 & clf\_\_estimator\_\_max\_depth=3, clf\_\_learning\_rate=0.5, clf\_\_n\_estimators=25 (3/5) \\
+grid\_all / Stacking & 0.666 +/- 0.059 & 0.784 & 0.784 & 0.620 & 0.517 & 0.616 & clf\_\_final\_C=1.0, clf\_\_n\_neighbors=3, clf\_\_tree\_max\_depth=2 (2/5) \\
+grid\_all / Gradient Boosting & 0.726 +/- 0.066 & 0.720 & 0.720 & 0.754 & 0.379 & 0.554 & clf\_\_learning\_rate=0.1, clf\_\_max\_depth=3, clf\_\_n\_estimators=50, clf\_\_subsample=0.8 (1/5) \\
+random\_all / Bagging & 0.672 +/- 0.047 & 0.731 & 0.731 & 0.648 & 0.728 & 0.336 & clf\_\_estimator\_\_max\_depth=None, clf\_\_max\_samples=0.8446612641953124, clf\_\_n\_estimators=149 (1/5) \\
+random\_all / AdaBoost & 0.663 +/- 0.061 & 0.737 & 0.737 & 0.634 & 0.473 & 0.313 & clf\_\_estimator\_\_max\_depth=3, clf\_\_learning\_rate=0.5115312125207079, clf\_\_n\_estimators=115 (2/5) \\
+random\_all / Stacking & 0.639 +/- 0.041 & 0.765 & 0.765 & 0.591 & 0.859 & 0.371 & clf\_\_final\_C=3.800329214045199, clf\_\_n\_neighbors=9, clf\_\_tree\_max\_depth=2 (2/5) \\
+random\_all / Gradient Boosting & 0.727 +/- 0.053 & 0.716 & 0.716 & 0.767 & 0.632 & 0.553 & clf\_\_learning\_rate=0.0602906674791436, clf\_\_max\_depth=2, clf\_\_n\_estimators=149, clf\_\_subsample=0.7428600453765822 (2/5) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Experimento GDS\_R2}
+\noindent\textbf{Distribuci\'on de clases:} 1: 649, 2: 298, 3: 172. \textbf{n\_min:} 172. \textbf{k externo:} 5.
+\begin{table}[h]
+\centering
+\caption{Resultados para GDS\_R2}
+\scriptsize
+\begin{tabular}{p{3.2cm}p{2.0cm}p{1.6cm}p{1.6cm}p{1.8cm}p{1.5cm}p{1.4cm}p{3.4cm}}
+\toprule
+Experimento / modelo & F1 macro & Balanced Acc. & Recall macro & Precisi\'on macro & Estab. & ICN & Hiperpar\'ametros / estado \\
+\midrule
+grid\_all / Bagging & 0.619 +/- 0.040 & 0.625 & 0.625 & 0.622 & 0.130 & 0.006 & clf\_\_estimator\_\_max\_depth=2, clf\_\_max\_samples=0.7, clf\_\_n\_estimators=50 (2/5) \\
+grid\_all / AdaBoost & 0.645 +/- 0.033 & 0.652 & 0.652 & 0.642 & 0.523 & 0.556 & clf\_\_estimator\_\_max\_depth=3, clf\_\_learning\_rate=0.5, clf\_\_n\_estimators=25 (3/5) \\
+grid\_all / Stacking & 0.651 +/- 0.026 & 0.663 & 0.663 & 0.645 & 1.000 & 0.767 & clf\_\_final\_C=1.0, clf\_\_n\_neighbors=7, clf\_\_tree\_max\_depth=None (1/5) \\
+grid\_all / Gradient Boosting & 0.673 +/- 0.040 & 0.650 & 0.650 & 0.713 & 0.116 & 0.802 & clf\_\_learning\_rate=0.1, clf\_\_max\_depth=3, clf\_\_n\_estimators=50, clf\_\_subsample=1.0 (1/5) \\
+random\_all / Bagging & 0.662 +/- 0.035 & 0.661 & 0.661 & 0.671 & 0.400 & 0.819 & clf\_\_estimator\_\_max\_depth=4, clf\_\_max\_samples=0.7783331011414365, clf\_\_n\_estimators=111 (2/5) \\
+random\_all / AdaBoost & 0.643 +/- 0.033 & 0.647 & 0.647 & 0.642 & 0.541 & 0.483 & clf\_\_estimator\_\_max\_depth=3, clf\_\_learning\_rate=0.5282057895135501, clf\_\_n\_estimators=112 (3/5) \\
+random\_all / Stacking & 0.648 +/- 0.031 & 0.658 & 0.658 & 0.643 & 0.661 & 0.655 & clf\_\_final\_C=0.13292918943162169, clf\_\_n\_neighbors=10, clf\_\_tree\_max\_depth=2 (2/5) \\
+random\_all / Gradient Boosting & 0.668 +/- 0.042 & 0.645 & 0.645 & 0.712 & 0.000 & 0.700 & clf\_\_learning\_rate=0.0451659424678903, clf\_\_max\_depth=3, clf\_\_n\_estimators=102, clf\_\_subsample=0.7692681476866446 (1/5) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Experimento GDS\_R3}
+\noindent\textbf{Distribuci\'on de clases:} 1: 947, 3: 172. \textbf{n\_min:} 172. \textbf{k externo:} 5.
+\begin{table}[h]
+\centering
+\caption{Resultados para GDS\_R3}
+\scriptsize
+\begin{tabular}{p{3.2cm}p{2.0cm}p{1.6cm}p{1.6cm}p{1.8cm}p{1.5cm}p{1.4cm}p{3.4cm}}
+\toprule
+Experimento / modelo & F1 macro & Balanced Acc. & Recall macro & Precisi\'on macro & Estab. & ICN & Hiperpar\'ametros / estado \\
+\midrule
+grid\_all / Bagging & 0.754 +/- 0.043 & 0.818 & 0.818 & 0.732 & 0.508 & 0.356 & clf\_\_estimator\_\_max\_depth=2, clf\_\_max\_samples=0.7, clf\_\_n\_estimators=50 (3/5) \\
+grid\_all / AdaBoost & 0.799 +/- 0.039 & 0.802 & 0.802 & 0.800 & 0.602 & 0.703 & clf\_\_estimator\_\_max\_depth=2, clf\_\_learning\_rate=0.5, clf\_\_n\_estimators=25 (3/5) \\
+grid\_all / Stacking & 0.791 +/- 0.021 & 0.842 & 0.842 & 0.763 & 0.988 & 0.825 & clf\_\_final\_C=0.1, clf\_\_n\_neighbors=3, clf\_\_tree\_max\_depth=2 (2/5) \\
+grid\_all / Gradient Boosting & 0.795 +/- 0.062 & 0.763 & 0.763 & 0.844 & 0.104 & 0.483 & clf\_\_learning\_rate=0.1, clf\_\_max\_depth=3, clf\_\_n\_estimators=100, clf\_\_subsample=1.0 (2/5) \\
+random\_all / Bagging & 0.769 +/- 0.021 & 0.838 & 0.838 & 0.738 & 1.000 & 0.611 & clf\_\_estimator\_\_max\_depth=4, clf\_\_max\_samples=0.7783331011414365, clf\_\_n\_estimators=111 (3/5) \\
+random\_all / AdaBoost & 0.803 +/- 0.044 & 0.800 & 0.800 & 0.809 & 0.485 & 0.724 & clf\_\_estimator\_\_max\_depth=2, clf\_\_learning\_rate=0.8982714934301164, clf\_\_n\_estimators=39 (2/5) \\
+random\_all / Stacking & 0.779 +/- 0.026 & 0.824 & 0.824 & 0.759 & 0.886 & 0.635 & clf\_\_final\_C=0.014936568554617643, clf\_\_n\_neighbors=10, clf\_\_tree\_max\_depth=2 (3/5) \\
+random\_all / Gradient Boosting & 0.787 +/- 0.067 & 0.752 & 0.752 & 0.856 & 0.000 & 0.373 & clf\_\_learning\_rate=0.012002827428180858, clf\_\_max\_depth=4, clf\_\_n\_estimators=111, clf\_\_subsample=0.7271819303598462 (2/5) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Experimento GDS\_R4}
+\noindent\textbf{Distribuci\'on de clases:} 1: 149, 2: 906, 3: 64. \textbf{n\_min:} 64. \textbf{k externo:} 5.
+\begin{table}[h]
+\centering
+\caption{Resultados para GDS\_R4}
+\scriptsize
+\begin{tabular}{p{3.2cm}p{2.0cm}p{1.6cm}p{1.6cm}p{1.8cm}p{1.5cm}p{1.4cm}p{3.4cm}}
+\toprule
+Experimento / modelo & F1 macro & Balanced Acc. & Recall macro & Precisi\'on macro & Estab. & ICN & Hiperpar\'ametros / estado \\
+\midrule
+grid\_all / Bagging & 0.600 +/- 0.032 & 0.657 & 0.657 & 0.598 & 0.505 & 0.800 & clf\_\_estimator\_\_max\_depth=None, clf\_\_max\_samples=0.7, clf\_\_n\_estimators=50 (4/5) \\
+grid\_all / AdaBoost & 0.535 +/- 0.040 & 0.703 & 0.703 & 0.520 & 0.000 & 0.575 & clf\_\_estimator\_\_max\_depth=3, clf\_\_learning\_rate=1.0, clf\_\_n\_estimators=25 (2/5) \\
+grid\_all / Stacking & 0.530 +/- 0.039 & 0.722 & 0.722 & 0.525 & 0.101 & 0.605 & clf\_\_final\_C=0.1, clf\_\_n\_neighbors=7, clf\_\_tree\_max\_depth=2 (2/5) \\
+grid\_all / Gradient Boosting & 0.525 +/- 0.033 & 0.527 & 0.527 & 0.542 & 0.474 & 0.213 & clf\_\_learning\_rate=0.05, clf\_\_max\_depth=3, clf\_\_n\_estimators=100, clf\_\_subsample=1.0 (2/5) \\
+random\_all / Bagging & 0.609 +/- 0.031 & 0.661 & 0.661 & 0.610 & 0.577 & 0.852 & clf\_\_estimator\_\_max\_depth=None, clf\_\_max\_samples=0.6092249700165663, clf\_\_n\_estimators=115 (3/5) \\
+random\_all / AdaBoost & 0.498 +/- 0.034 & 0.655 & 0.655 & 0.482 & 0.394 & 0.331 & clf\_\_estimator\_\_max\_depth=3, clf\_\_learning\_rate=0.9692763545078751, clf\_\_n\_estimators=26 (2/5) \\
+random\_all / Stacking & 0.518 +/- 0.024 & 0.715 & 0.715 & 0.517 & 1.000 & 0.584 & clf\_\_final\_C=3.800329214045199, clf\_\_n\_neighbors=9, clf\_\_tree\_max\_depth=2 (1/5) \\
+random\_all / Gradient Boosting & 0.505 +/- 0.025 & 0.505 & 0.505 & 0.544 & 0.998 & 0.124 & clf\_\_learning\_rate=0.11236195345220405, clf\_\_max\_depth=4, clf\_\_n\_estimators=113, clf\_\_subsample=0.8400288679743939 (2/5) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Experimento GDS\_R5}
+\noindent\textbf{Distribuci\'on de clases:} 1: 149, 2: 798, 3: 172. \textbf{n\_min:} 149. \textbf{k externo:} 5.
+\begin{table}[h]
+\centering
+\caption{Resultados para GDS\_R5}
+\scriptsize
+\begin{tabular}{p{3.2cm}p{2.0cm}p{1.6cm}p{1.6cm}p{1.8cm}p{1.5cm}p{1.4cm}p{3.4cm}}
+\toprule
+Experimento / modelo & F1 macro & Balanced Acc. & Recall macro & Precisi\'on macro & Estab. & ICN & Hiperpar\'ametros / estado \\
+\midrule
+grid\_all / Bagging & 0.542 +/- 0.038 & 0.617 & 0.617 & 0.532 & 0.304 & 0.694 & clf\_\_estimator\_\_max\_depth=None, clf\_\_max\_samples=0.7, clf\_\_n\_estimators=25 (4/5) \\
+grid\_all / AdaBoost & 0.520 +/- 0.048 & 0.626 & 0.626 & 0.527 & 0.004 & 0.533 & clf\_\_estimator\_\_max\_depth=2, clf\_\_learning\_rate=1.0, clf\_\_n\_estimators=25 (2/5) \\
+grid\_all / Stacking & 0.539 +/- 0.026 & 0.657 & 0.657 & 0.554 & 0.662 & 0.866 & clf\_\_final\_C=0.1, clf\_\_n\_neighbors=3, clf\_\_tree\_max\_depth=2 (3/5) \\
+grid\_all / Gradient Boosting & 0.504 +/- 0.015 & 0.509 & 0.509 & 0.518 & 1.000 & 0.103 & clf\_\_learning\_rate=0.1, clf\_\_max\_depth=3, clf\_\_n\_estimators=100, clf\_\_subsample=0.8 (2/5) \\
+random\_all / Bagging & 0.556 +/- 0.040 & 0.614 & 0.614 & 0.550 & 0.254 & 0.828 & clf\_\_estimator\_\_max\_depth=None, clf\_\_max\_samples=0.6092249700165663, clf\_\_n\_estimators=115 (5/5) \\
+random\_all / AdaBoost & 0.520 +/- 0.048 & 0.619 & 0.619 & 0.529 & 0.000 & 0.517 & clf\_\_estimator\_\_max\_depth=3, clf\_\_learning\_rate=0.6831809216468459, clf\_\_n\_estimators=86 (1/5) \\
+random\_all / Stacking & 0.536 +/- 0.029 & 0.652 & 0.652 & 0.553 & 0.580 & 0.820 & clf\_\_final\_C=0.08179499475211674, clf\_\_n\_neighbors=8, clf\_\_tree\_max\_depth=2 (2/5) \\
+random\_all / Gradient Boosting & 0.499 +/- 0.015 & 0.502 & 0.502 & 0.527 & 0.985 & 0.076 & clf\_\_learning\_rate=0.3931632352373656, clf\_\_max\_depth=3, clf\_\_n\_estimators=113, clf\_\_subsample=0.9976634677873653 (1/5) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

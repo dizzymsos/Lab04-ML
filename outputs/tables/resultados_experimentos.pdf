@@ -1,0 +1,436 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 3054 >>
+stream
+BT
+/F1 8 Tf
+40 555 Td
+10 TL
+(Laboratorio 04: resultados de clasificadores de ensamble) Tj
+T*
+(Bagging, AdaBoost, Stacking y Gradient Boosting evaluados con validación cruzada anidada.) Tj
+T*
+() Tj
+T*
+(Experimento GDS) Tj
+T*
+(Distribución: 1: 149, 2: 500, 3: 298, 4: 108, 5: 42, 6: 20, 7: 2 | n_min=2 | k_outer=2) Tj
+T*
+() Tj
+T*
+(EXPERIMENTO/MODELO         F1 MACRO         BALACC          RECALL          PRECISIÓN       ESTAB           ICN             ESTADO                      ) Tj
+T*
+(--------------------------------------------------------------------------------------------------------------------------------------------------------) Tj
+T*
+() Tj
+T*
+(grid_all / Bagging         0.346 +/- 0.002  0.378           0.378           0.341           1.000           0.544           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50 \(2/2\)) Tj
+T*
+(grid_all / AdaBoost        0.301 +/- 0.023  0.432           0.432           0.300           0.634           0.402           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=50 \(1/2\)) Tj
+T*
+(grid_all / Stacking        0.364 +/- 0.059  0.473           0.473           0.365           0.000           0.936           clf__final_C=1.0, clf__n_...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=2 \(2/2\)) Tj
+T*
+(grid_all / Gradient Boo... 0.341 +/- 0.010  0.349           0.349           0.363           0.862           0.445           clf__learning_rate=0.1, c...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.1, clf__max_depth=2, clf__n_estimators=50, clf__subsample=1.0 \(1/2\)) Tj
+T*
+(random_all / Bagging       0.312 +/- 0.018  0.394           0.394           0.318           0.723           0.365           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663,) Tj
+T*
+(  clf__n_estimators=115 \(1/2\)) Tj
+T*
+(random_all / AdaBoost      0.292 +/- 0.024  0.366           0.366           0.306           0.621           0.140           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=3, clf__learning_rate=0.5714334089609704, clf__n_estimators=27) Tj
+T*
+(  \(1/2\)) Tj
+T*
+(random_all / Stacking      0.330 +/- 0.022  0.446           0.446           0.341           0.657           0.659           clf__final_C=0.6847920095...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=0.6847920095574779, clf__n_neighbors=5, clf__tree_max_depth=None \(2/2\)) Tj
+T*
+(random_all / Gradient B... 0.328 +/- 0.016  0.335           0.335           0.376           0.751           0.336           clf__learning_rate=0.0109...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.010944158354662342, clf__max_depth=4, clf__n_estimators=108,) Tj
+T*
+(  clf__subsample=0.8199582915145767 \(1/2\)) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 2852 >>
+stream
+BT
+/F1 8 Tf
+40 555 Td
+10 TL
+(Experimento GDS_R1) Tj
+T*
+(Distribución: 1: 947, 2: 150, 3: 22 | n_min=22 | k_outer=5) Tj
+T*
+() Tj
+T*
+(EXPERIMENTO/MODELO         F1 MACRO         BALACC          RECALL          PRECISIÓN       ESTAB           ICN             ESTADO                      ) Tj
+T*
+(--------------------------------------------------------------------------------------------------------------------------------------------------------) Tj
+T*
+() Tj
+T*
+(grid_all / Bagging         0.687 +/- 0.033  0.743           0.743           0.659           1.000           0.497           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50 \(3/5\)) Tj
+T*
+(grid_all / AdaBoost        0.676 +/- 0.086  0.713           0.713           0.669           0.000           0.211           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25 \(3/5\)) Tj
+T*
+(grid_all / Stacking        0.666 +/- 0.059  0.784           0.784           0.620           0.517           0.616           clf__final_C=1.0, clf__n_...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=1.0, clf__n_neighbors=3, clf__tree_max_depth=2 \(2/5\)) Tj
+T*
+(grid_all / Gradient Boo... 0.726 +/- 0.066  0.720           0.720           0.754           0.379           0.554           clf__learning_rate=0.1, c...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=0.8 \(1/5\)) Tj
+T*
+(random_all / Bagging       0.672 +/- 0.047  0.731           0.731           0.648           0.728           0.336           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=None, clf__max_samples=0.8446612641953124,) Tj
+T*
+(  clf__n_estimators=149 \(1/5\)) Tj
+T*
+(random_all / AdaBoost      0.663 +/- 0.061  0.737           0.737           0.634           0.473           0.313           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=3, clf__learning_rate=0.5115312125207079,) Tj
+T*
+(  clf__n_estimators=115 \(2/5\)) Tj
+T*
+(random_all / Stacking      0.639 +/- 0.041  0.765           0.765           0.591           0.859           0.371           clf__final_C=3.8003292140...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=3.800329214045199, clf__n_neighbors=9, clf__tree_max_depth=2 \(2/5\)) Tj
+T*
+(random_all / Gradient B... 0.727 +/- 0.053  0.716           0.716           0.767           0.632           0.553           clf__learning_rate=0.0602...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.0602906674791436, clf__max_depth=2, clf__n_estimators=149,) Tj
+T*
+(  clf__subsample=0.7428600453765822 \(2/5\)) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 2854 >>
+stream
+BT
+/F1 8 Tf
+40 555 Td
+10 TL
+(Experimento GDS_R2) Tj
+T*
+(Distribución: 1: 649, 2: 298, 3: 172 | n_min=172 | k_outer=5) Tj
+T*
+() Tj
+T*
+(EXPERIMENTO/MODELO         F1 MACRO         BALACC          RECALL          PRECISIÓN       ESTAB           ICN             ESTADO                      ) Tj
+T*
+(--------------------------------------------------------------------------------------------------------------------------------------------------------) Tj
+T*
+() Tj
+T*
+(grid_all / Bagging         0.619 +/- 0.040  0.625           0.625           0.622           0.130           0.006           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=2, clf__max_samples=0.7, clf__n_estimators=50 \(2/5\)) Tj
+T*
+(grid_all / AdaBoost        0.645 +/- 0.033  0.652           0.652           0.642           0.523           0.556           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=3, clf__learning_rate=0.5, clf__n_estimators=25 \(3/5\)) Tj
+T*
+(grid_all / Stacking        0.651 +/- 0.026  0.663           0.663           0.645           1.000           0.767           clf__final_C=1.0, clf__n_...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=1.0, clf__n_neighbors=7, clf__tree_max_depth=None \(1/5\)) Tj
+T*
+(grid_all / Gradient Boo... 0.673 +/- 0.040  0.650           0.650           0.713           0.116           0.802           clf__learning_rate=0.1, c...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=50, clf__subsample=1.0 \(1/5\)) Tj
+T*
+(random_all / Bagging       0.662 +/- 0.035  0.661           0.661           0.671           0.400           0.819           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=4, clf__max_samples=0.7783331011414365, clf__n_estimators=111) Tj
+T*
+(  \(2/5\)) Tj
+T*
+(random_all / AdaBoost      0.643 +/- 0.033  0.647           0.647           0.642           0.541           0.483           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=3, clf__learning_rate=0.5282057895135501,) Tj
+T*
+(  clf__n_estimators=112 \(3/5\)) Tj
+T*
+(random_all / Stacking      0.648 +/- 0.031  0.658           0.658           0.643           0.661           0.655           clf__final_C=0.1329291894...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=0.13292918943162169, clf__n_neighbors=10, clf__tree_max_depth=2 \(2/5\)) Tj
+T*
+(random_all / Gradient B... 0.668 +/- 0.042  0.645           0.645           0.712           0.000           0.700           clf__learning_rate=0.0451...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.0451659424678903, clf__max_depth=3, clf__n_estimators=102,) Tj
+T*
+(  clf__subsample=0.7692681476866446 \(1/5\)) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 2856 >>
+stream
+BT
+/F1 8 Tf
+40 555 Td
+10 TL
+(Experimento GDS_R3) Tj
+T*
+(Distribución: 1: 947, 3: 172 | n_min=172 | k_outer=5) Tj
+T*
+() Tj
+T*
+(EXPERIMENTO/MODELO         F1 MACRO         BALACC          RECALL          PRECISIÓN       ESTAB           ICN             ESTADO                      ) Tj
+T*
+(--------------------------------------------------------------------------------------------------------------------------------------------------------) Tj
+T*
+() Tj
+T*
+(grid_all / Bagging         0.754 +/- 0.043  0.818           0.818           0.732           0.508           0.356           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=2, clf__max_samples=0.7, clf__n_estimators=50 \(3/5\)) Tj
+T*
+(grid_all / AdaBoost        0.799 +/- 0.039  0.802           0.802           0.800           0.602           0.703           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=2, clf__learning_rate=0.5, clf__n_estimators=25 \(3/5\)) Tj
+T*
+(grid_all / Stacking        0.791 +/- 0.021  0.842           0.842           0.763           0.988           0.825           clf__final_C=0.1, clf__n_...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=0.1, clf__n_neighbors=3, clf__tree_max_depth=2 \(2/5\)) Tj
+T*
+(grid_all / Gradient Boo... 0.795 +/- 0.062  0.763           0.763           0.844           0.104           0.483           clf__learning_rate=0.1, c...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=100, clf__subsample=1.0) Tj
+T*
+(  \(2/5\)) Tj
+T*
+(random_all / Bagging       0.769 +/- 0.021  0.838           0.838           0.738           1.000           0.611           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=4, clf__max_samples=0.7783331011414365, clf__n_estimators=111) Tj
+T*
+(  \(3/5\)) Tj
+T*
+(random_all / AdaBoost      0.803 +/- 0.044  0.800           0.800           0.809           0.485           0.724           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=2, clf__learning_rate=0.8982714934301164, clf__n_estimators=39) Tj
+T*
+(  \(2/5\)) Tj
+T*
+(random_all / Stacking      0.779 +/- 0.026  0.824           0.824           0.759           0.886           0.635           clf__final_C=0.0149365685...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=0.014936568554617643, clf__n_neighbors=10, clf__tree_max_depth=2 \(3/5\)) Tj
+T*
+(random_all / Gradient B... 0.787 +/- 0.067  0.752           0.752           0.856           0.000           0.373           clf__learning_rate=0.0120...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.012002827428180858, clf__max_depth=4, clf__n_estimators=111,) Tj
+T*
+(  clf__subsample=0.7271819303598462 \(2/5\)) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 2864 >>
+stream
+BT
+/F1 8 Tf
+40 555 Td
+10 TL
+(Experimento GDS_R4) Tj
+T*
+(Distribución: 1: 149, 2: 906, 3: 64 | n_min=64 | k_outer=5) Tj
+T*
+() Tj
+T*
+(EXPERIMENTO/MODELO         F1 MACRO         BALACC          RECALL          PRECISIÓN       ESTAB           ICN             ESTADO                      ) Tj
+T*
+(--------------------------------------------------------------------------------------------------------------------------------------------------------) Tj
+T*
+() Tj
+T*
+(grid_all / Bagging         0.600 +/- 0.032  0.657           0.657           0.598           0.505           0.800           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=50 \(4/5\)) Tj
+T*
+(grid_all / AdaBoost        0.535 +/- 0.040  0.703           0.703           0.520           0.000           0.575           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=3, clf__learning_rate=1.0, clf__n_estimators=25 \(2/5\)) Tj
+T*
+(grid_all / Stacking        0.530 +/- 0.039  0.722           0.722           0.525           0.101           0.605           clf__final_C=0.1, clf__n_...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=0.1, clf__n_neighbors=7, clf__tree_max_depth=2 \(2/5\)) Tj
+T*
+(grid_all / Gradient Boo... 0.525 +/- 0.033  0.527           0.527           0.542           0.474           0.213           clf__learning_rate=0.05, ...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.05, clf__max_depth=3, clf__n_estimators=100, clf__subsample=1.0) Tj
+T*
+(  \(2/5\)) Tj
+T*
+(random_all / Bagging       0.609 +/- 0.031  0.661           0.661           0.610           0.577           0.852           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663,) Tj
+T*
+(  clf__n_estimators=115 \(3/5\)) Tj
+T*
+(random_all / AdaBoost      0.498 +/- 0.034  0.655           0.655           0.482           0.394           0.331           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=3, clf__learning_rate=0.9692763545078751, clf__n_estimators=26) Tj
+T*
+(  \(2/5\)) Tj
+T*
+(random_all / Stacking      0.518 +/- 0.024  0.715           0.715           0.517           1.000           0.584           clf__final_C=3.8003292140...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=3.800329214045199, clf__n_neighbors=9, clf__tree_max_depth=2 \(1/5\)) Tj
+T*
+(random_all / Gradient B... 0.505 +/- 0.025  0.505           0.505           0.544           0.998           0.124           clf__learning_rate=0.1123...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.11236195345220405, clf__max_depth=4, clf__n_estimators=113,) Tj
+T*
+(  clf__subsample=0.8400288679743939 \(2/5\)) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 2866 >>
+stream
+BT
+/F1 8 Tf
+40 555 Td
+10 TL
+(Experimento GDS_R5) Tj
+T*
+(Distribución: 1: 149, 2: 798, 3: 172 | n_min=149 | k_outer=5) Tj
+T*
+() Tj
+T*
+(EXPERIMENTO/MODELO         F1 MACRO         BALACC          RECALL          PRECISIÓN       ESTAB           ICN             ESTADO                      ) Tj
+T*
+(--------------------------------------------------------------------------------------------------------------------------------------------------------) Tj
+T*
+() Tj
+T*
+(grid_all / Bagging         0.542 +/- 0.038  0.617           0.617           0.532           0.304           0.694           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=None, clf__max_samples=0.7, clf__n_estimators=25 \(4/5\)) Tj
+T*
+(grid_all / AdaBoost        0.520 +/- 0.048  0.626           0.626           0.527           0.004           0.533           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=2, clf__learning_rate=1.0, clf__n_estimators=25 \(2/5\)) Tj
+T*
+(grid_all / Stacking        0.539 +/- 0.026  0.657           0.657           0.554           0.662           0.866           clf__final_C=0.1, clf__n_...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=0.1, clf__n_neighbors=3, clf__tree_max_depth=2 \(3/5\)) Tj
+T*
+(grid_all / Gradient Boo... 0.504 +/- 0.015  0.509           0.509           0.518           1.000           0.103           clf__learning_rate=0.1, c...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.1, clf__max_depth=3, clf__n_estimators=100, clf__subsample=0.8) Tj
+T*
+(  \(2/5\)) Tj
+T*
+(random_all / Bagging       0.556 +/- 0.040  0.614           0.614           0.550           0.254           0.828           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=None, clf__max_samples=0.6092249700165663,) Tj
+T*
+(  clf__n_estimators=115 \(5/5\)) Tj
+T*
+(random_all / AdaBoost      0.520 +/- 0.048  0.619           0.619           0.529           0.000           0.517           clf__estimator__max_depth...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__estimator__max_depth=3, clf__learning_rate=0.6831809216468459, clf__n_estimators=86) Tj
+T*
+(  \(1/5\)) Tj
+T*
+(random_all / Stacking      0.536 +/- 0.029  0.652           0.652           0.553           0.580           0.820           clf__final_C=0.0817949947...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__final_C=0.08179499475211674, clf__n_neighbors=8, clf__tree_max_depth=2 \(2/5\)) Tj
+T*
+(random_all / Gradient B... 0.499 +/- 0.015  0.502           0.502           0.527           0.985           0.076           clf__learning_rate=0.3931...) Tj
+T*
+(  Hiperparámetros más frecuentes: clf__learning_rate=0.3931632352373656, clf__max_depth=3, clf__n_estimators=113,) Tj
+T*
+(  clf__subsample=0.9976634677873653 \(1/5\)) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000154 00000 n 
+0000000249 00000 n 
+0000003355 00000 n 
+0000003481 00000 n 
+0000006385 00000 n 
+0000006511 00000 n 
+0000009417 00000 n 
+0000009543 00000 n 
+0000012452 00000 n 
+0000012580 00000 n 
+0000015497 00000 n 
+0000015625 00000 n 
+0000018544 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R >>
+startxref
+18672
+%%EOF
